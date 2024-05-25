@@ -1,0 +1,11 @@
+@import "../sections/main-overview";
+@import "../sections/main-about";
+@import "../sections/main-pricing";
+@import "../sections/main-contact";
+
+.main {
+  position: relative;
+  top: 70px;
+  text-align: center;
+  padding-top: 100px;
+}

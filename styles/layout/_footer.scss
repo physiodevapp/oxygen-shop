@@ -1,0 +1,57 @@
+
+.footer {
+  position: relative;
+  top: 70px;
+  display: block;
+  height: 89px;
+  box-shadow: 0px -5px 40px 0px #00000033;
+
+  &__text {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 1.3em;
+
+    &__company {
+      font-family: Raleway;
+      font-size: 26px;
+      font-weight: 300;
+      line-height: 30px;
+      text-align: left;
+      color: $color-1;
+      
+    }
+
+    &__copyright {
+      font-family: Open Sans;
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 14.98px;
+      text-align: left;
+      color: #A5A5A5;
+      
+    }
+
+  }
+
+  &__social-media {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    margin-right: 1.7em;
+
+    &__media--left {
+      display: inline-block;
+      margin-right: 1em;
+    }
+
+    &__media {
+      display: inline-block;
+    }
+
+  }
+
+}

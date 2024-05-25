@@ -1,40 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./scss/layout.scss">
-    <title>Document</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>OXYGEN Shop</title>
+</head>
 
-  <body>
-    <header class="header">
-      <figure class="header__figure">
-        <img src="" />
+<body>
+  <nav class="navbar">
+    <h3 class="navbar__title">OXYGENShop</h3>
+    <button class="navbar__menu-button" type="button">
+      <figure class="menu-button__media">
+        <img class="menu-button__media_img" src="./images/Menu.jpg" alt="menu-icon">
       </figure>
-      <nav class="header__nav"></nav>
-    </header>
-    <main class="main">
-      <section class="main__section__intro">
-        <article></article>
-        <figure class="main__section__intro__image">
-          <img src="" />
+    </button>
+  </nav>
+  <header class="header">
+    <h3 class="header__title">Sell More</h3>
+    <h4 class="header__subtitle">Open shop on our platform and increase your sales</h4>
+    <button class="header__button" type="button">Open your shop</button>
+    <figure class="header__media">
+      <img class="header__media__img" src="./images/Background 1.jpg" alt="">
+    </figure>
+  </header>
+  <main class="main">
+    <section class="main__overview">
+      <h3 class="main__overview__title">The most popular sales platform in country</h3>
+      <article class="main__overview__article">
+        <figure class="main__overview__article__media_1">
+          <img class="main__overview__article__media_1__img" src="./images/Ellipse 1.jpg" alt=""/>
         </figure>
-      </section>
-      <section class="main__section__overview"></section>
-      <section class="main__section__about"></section>
-      <section class="main__section__pricing"></section>
-      <section class="main__section__contact"></section>
-    </main>
-    <footer class="footer">
-      <figure>
-        <img src="" />
+        <figure class="main__overview__article__media_1_top">
+          <img class="main__overview__article__media_1_top__img" src="./images/Person 2.png" alt=""/>
+        </figure>
+        <p class="main__overview__article__content_primary">100000+</p>
+        <p class="main__overview__article__content_secondary">daily entries</p>
+      </article>
+      <article class="main__overview__article">
+        <figure class="main__overview__article__media_2">
+          <img class="main__overview__article__media_2__img" src="./images/Ellipse 2.jpg" alt=""/>
+        </figure>
+        <figure class="main__overview__article__media_2_top">
+          <img class="main__overview__article__media_2_top__img" src="./images/Eye 2.png" alt=""/>
+        </figure>
+        <p class="main__overview__article__content_primary">2000000+</p>
+        <p class="main__overview__article__content_secondary">seen products 
+          every day</p>
+      </article>
+      <article class="main__overview__article">
+        <figure class="main__overview__article__media_3">
+          <img class="main__overview__article__media_3__img" src="./images/Ellipse 3.jpg" alt=""/>
+        </figure>
+        <figure class="main__overview__article__media_3_top">
+          <img class="main__overview__article__media_3_top__img" src="./images/Catalog 2.png" alt=""/>
+        </figure>
+        <p class="main__overview__article__content_primary">10000+</p>
+        <p class="main__overview__article__content_secondary">added posts
+          daily</p>
+      </article>
+    </section>
+    <section class="main__about">
+      <article class="main__about__article">
+        <figure class="main__about__article__media_1">
+          <img class="main__about__article__media_1__img" src="./images/Macbook2 2.png" alt=""/>
+        </figure>
+        <figure class="main__about__article__media_1_top">
+          <img class="main__about__article__media_1_top__img" src="./images/Rectangle 5.jpg" alt=""/>
+        </figure>
+        <p class="main__about__article__content_primary">Be always first</p>
+        <p class="main__about__article__content_secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      </article>
+      <article class="main__about__article">
+        <figure class="main__about__article__media_2">
+          <img class="main__about__article__media_2__img" src="./images/Ellipse 4.png" alt=""/>
+        </figure>
+        <figure class="main__about__article__media_2_top">
+          <img class="main__about__article__media_2_top__img" src="./images/iPhone2 2.png" alt=""/>
+        </figure>
+        <p class="main__about__article__content_primary">Your shop is where you are!</p>
+        <p class="main__about__article__content_secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      </article>
+      <article class="main__about__article">
+        <p class="main__about__article__content_primary">Increase recognition your brand!</p>
+        <p class="main__about__article__content_secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      </article>  
+      <aside class="main__about__media_container">
+        <figure class="main__about__article__media_3_top">
+          <img class="main__about__article__media_3_top__img" src="./images/Trumpet 2.png" alt=""/>
+        </figure>
+      </aside>    
+    </section>
+    <section class="main__pricing">
+      <h3 class="main__pricing__title">Pricing</h3>
+      <article class="main__pricing__article--basic">
+        <div class="pricing__article__pack">
+          <p class="pricing__article__pack__title">Basic</p>
+          <p class="pricing__article__pack__value">$0</p>
+          <p class="pricing__article__pack__offer"></p>
+        </div>        
+        <ul class="pricing__article__features">
+          <li class="pricing__article__features__item"><img src="./images/Checkbox.jpg" alt="checkbox"/>100 MB HDD</li>
+          <li class="pricing__article__features__item"><img src="./images/Checkbox.jpg" alt="checkbox"/>1 Subdomain</li>
+          <li class="pricing__article__features__item"><img src="./images/Checkbox.jpg" alt="checkbox"/>2 E-mails</li>
+          <li class="pricing__article__features__item"><img src="./images/Cross.jpg" alt="cross"/>Two years license</li>
+          <li class="pricing__article__features__item"><img src="./images/Cross.jpg" alt="cross"/>Full support</li>
+        </ul>
+        <button class="pricing__article__button">Begin</button>
+      </article>
+      <article class="main__pricing__article--professional">
+        <div class="pricing__article__pack">
+          <p class="pricing__article__pack__title">Professional</p>
+          <p class="pricing__article__pack__value">$25</p>
+          <p class="pricing__article__pack__offer">Limited offer</p>
+        </div>        
+        <ul class="pricing__article__features">
+          <li class="pricing__article__features__item"><img src="./images/Checkbox.jpg" alt="checkbox"/>100 MB HDD</li>
+          <li class="pricing__article__features__item"><img src="./images/Checkbox.jpg" alt="checkbox"/>1 Subdomain</li>
+          <li class="pricing__article__features__item"><img src="./images/Checkbox.jpg" alt="checkbox"/>2 E-mails</li>
+          <li class="pricing__article__features__item"><img src="./images/Cross.jpg" alt="cross"/>Two years license</li>
+          <li class="pricing__article__features__item"><img src="./images/Cross.jpg" alt="cross"/>Full support</li>
+        </ul>
+        <button class="pricing__article__button">Begin</button>
+      </article> 
+      <article class="main__pricing__article--premium">
+        <div class="pricing__article__pack">
+          <p class="pricing__article__pack__title">Premium</p>
+          <p class="pricing__article__pack__value">$60</p>
+          <p class="pricing__article__pack__offer">Limited offer</p>
+        </div>        
+        <ul class="pricing__article__features">
+          <li class="pricing__article__features__item"><img src="./images/Checkbox.jpg" alt="checkbox"/>100 MB HDD</li>
+          <li class="pricing__article__features__item"><img src="./images/Checkbox.jpg" alt="checkbox"/>1 Subdomain</li>
+          <li class="pricing__article__features__item"><img src="./images/Checkbox.jpg" alt="checkbox"/>2 E-mails</li>
+          <li class="pricing__article__features__item"><img src="./images/Cross.jpg" alt="cross"/>Two years license</li>
+          <li class="pricing__article__features__item"><img src="./images/Cross.jpg" alt="cross"/>Full support</li>
+        </ul>
+        <button class="pricing__article__button">Begin</button>
+      </article>      
+    </section>
+    <section class="main__contact">
+      <h3 class="main__contact__title">Any questions?</h3>
+      <p class="main__contact__subtitle">Leave your email address or call us!</p>
+      <article class="main__contact__info">
+        <p class="contact__info"><img src="./images/Mail Icon 2.png" alt="mail-icon"/>info@bestshop.xyz</p>
+        <p class="contact__info"><img src="./images/Phone Icon 2.png" alt="tel-icon"/>123 456 789</p>
+      </article>
+      <form class="main__contact__form" action="#" method="POST">
+        <label class="contact__form__label" for="name">Name</label>
+        <input class="contact__form__input" id="name" name="name" type="text">
+        <label class="contact__form__label" for="email">Email</label>
+        <input class="contact__form__input" id="email" name="email" type="email">
+        <button class="contact__form__submit" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__text">
+      <h3 class="footer__text__company">OXYGENShop</h3>
+      <p class="footer__text__copyright">© 2022 OXYGEN, All Rights Reserved</p>
+    </div>
+    <div class="footer__social-media">
+      <figure class="footer__social-media__media--left">
+        <img class="footer__social-media__media__img" src="./images/Twitter (2) 2.png" alt="twitter-icon" />
       </figure>
-      <figure>
-        <img src="" />
+      <figure class="footer__social-media__media">
+        <img class="footer__social-media__media__img" src="./images/Facebook (3) 2.png" alt="facebook-icon" />
       </figure>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
 
 </html>

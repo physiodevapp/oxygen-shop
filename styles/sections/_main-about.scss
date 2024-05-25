@@ -1,0 +1,106 @@
+
+.main__about {
+  background-color: $color-4;
+  background-color: #F7F7F7;
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+  &__article {
+    position: relative;
+    margin: 0 30px 35px 30px;
+    background-color: white;
+    border: 1px solid #E8E9ED;
+    padding: 0 21px 25px 21px;
+  }
+
+  &__article__media_1__img {
+    width: min(192px, 100%);
+    height: auto;
+    display: inline-block;
+    padding-top: 19px;
+  }
+
+  &__article__media_1_top {
+    position: absolute;
+    top: 0;
+    left: calc(50% + 10px);
+    z-index: -1;
+  }
+
+  &__article__media_1_top__img {
+    width: min(90px, 100%);
+    height: auto;
+    display: inline-block;
+    transform: scale(1);
+  }
+
+  &__article__media_2__img {
+    width: min(131px, 100%);
+    height: auto;
+    display: inline-block;
+    padding-top: 19px;
+  }
+
+  &__article__media_2_top {
+    position: absolute;
+    top: 25px;
+    left: calc(50% + -65px);
+  }
+
+  &__article__media_2_top__img {
+    width: min(175px, 100%);
+    height: auto;
+    display: inline-block;
+    transform: scale(1);
+  }
+
+
+  &__article__container_media_3 {
+    width: 100%;
+    height: 195px;
+    display: inline-block;
+    background-color: $color-3;
+  }
+
+  &__article__media_3_top {
+    position: absolute;
+    top: 30px;
+    left: calc(50% - 179px);
+  }
+
+  &__article__media_3_top__img {
+    width: min(295px, 100%);
+    height: auto;
+    display: inline-block;
+    transform: scale(1);
+  }
+
+
+  &__article__content_primary {
+    font-family: Raleway;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 35.22px;
+    text-align: left;
+    
+  }
+
+  &__article__content_secondary {
+    font-family: Open Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+
+  }
+
+  &__media_container {
+    position: relative;
+    height: 195px;
+    margin: 0 30px 35px 30px;
+    background-color: #55DFB4;
+    border: 1px solid #E8E9ED;
+    padding: 0 21px 25px 21px;
+    margin-top: -35px;
+  }
+}

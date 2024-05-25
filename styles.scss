@@ -1,0 +1,16 @@
+
+@import "./styles/abstracts/variables";
+@import "./styles/layout/navbar";
+@import "./styles/layout/header";
+@import "./styles/layout/main.scss";
+@import "./styles/layout/footer.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body { 
+  min-width: 320px;
+}

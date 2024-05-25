@@ -1,0 +1,44 @@
+
+.header {
+  position: relative;
+  top: 170px;
+  text-align: center;
+
+  &__title {
+    font-family: Raleway;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 41.09px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+    text-align: center;
+  }
+
+  &__button {
+    box-shadow: 5px 10px 14px 0px #07ACE64A;
+    background-color: $color-1;
+    border-radius: 40px;
+    border: none;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: center;
+    color: white;
+    width: 310px;
+    height: 67px;
+    margin-bottom: 3em;
+  }
+
+  &__media__img {
+    width: min(500px, 100%);
+    height: auto;
+    display: inline-block;
+  }
+}
