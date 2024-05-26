@@ -1,4 +1,39 @@
 
+@mixin top-media($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@mixin top-image($scale) {
+  width: min(62px, 100%);
+  height: auto;
+  display: inline-block;
+  transform: scale($scale);
+}
+
+@mixin overview-article($top, $left, $scale) {
+  position: relative;
+  .overview__article__media {
+    &__bottom {
+
+      &__img {
+        width: min(62px, 100%);
+        height: auto;
+        display: inline-block;
+      }
+    }
+
+    &__top {      
+      @include top-media($top, $left);
+
+      &__img {
+        @include top-image($scale);
+      }
+    }
+  }
+}
+
 .main__overview {
 
   &__article {
@@ -12,65 +47,23 @@
     line-height: 35px;
     text-align: center;
   }
-  
-  &__article__media_1__img {
-    width: min(62px, 100%);
-    height: auto;
-    display: inline-block;
+
+  &__article--entries {
+    @include overview-article(-8px, calc(50% - 25px), 0.7);
+
+  }
+
+  &__article--products {
+    @include overview-article(12px, calc(50% - 11px), 1);
+
+  }
+
+  &__article--posts {
+    @include overview-article(6px, calc(50% - 1px), 1);
+
   }
   
-  &__article__media_1_top {
-    position: absolute;
-    top: -8px;
-    left: calc(50% - 25px);
-  }
-  
-  &__article__media_1_top__img {
-    width: min(62px, 100%);
-    height: auto;
-    display: inline-block;
-    transform: scale(0.7);
-  }
-  
-  &__article__media_2__img {
-    width: min(62px, 100%);
-    height: auto;
-    display: inline-block;
-  }
-  
-  &__article__media_2_top {
-    position: absolute;
-    top: 12px;
-    left: calc(50% - 11px);
-  }
-  
-  &__article__media_2_top__img {
-    width: min(62px, 100%);
-    height: auto;
-    display: inline-block;
-    transform: scale(1);
-  }
-  
-  &__article__media_3__img {
-    width: min(62px, 100%);
-    height: auto;
-    display: inline-block;
-  }
-  
-  &__article__media_3_top {
-    position: absolute;
-    top: 6px;
-    left: calc(50% - 1px);
-  }
-  
-  &__article__media_3_top__img {
-    width: min(62px, 100%);
-    height: auto;
-    display: inline-block;
-    transform: scale(1);
-  }
-  
-  &__article__content_primary {
+  .overview__article__content--primary {
     font-family: Raleway;
     font-size: 1.2rem;
     font-weight: 800;
@@ -79,7 +72,7 @@
     text-align: center;
   }
   
-  &__article__content_secondary {
+  .overview__article__content--secondary {
     font-family: Raleway;
     font-size: 1.3rem;
     font-weight: 400;

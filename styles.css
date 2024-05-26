@@ -79,55 +79,64 @@
   line-height: 35px;
   text-align: center;
 }
-.main__overview__article__media_1__img {
+.main__overview__article--entries {
+  position: relative;
+}
+.main__overview__article--entries .overview__article__media__bottom__img {
   width: min(62px, 100%);
   height: auto;
   display: inline-block;
 }
-.main__overview__article__media_1_top {
+.main__overview__article--entries .overview__article__media__top {
   position: absolute;
   top: -8px;
   left: calc(50% - 25px);
 }
-.main__overview__article__media_1_top__img {
+.main__overview__article--entries .overview__article__media__top__img {
   width: min(62px, 100%);
   height: auto;
   display: inline-block;
   transform: scale(0.7);
 }
-.main__overview__article__media_2__img {
+.main__overview__article--products {
+  position: relative;
+}
+.main__overview__article--products .overview__article__media__bottom__img {
   width: min(62px, 100%);
   height: auto;
   display: inline-block;
 }
-.main__overview__article__media_2_top {
+.main__overview__article--products .overview__article__media__top {
   position: absolute;
   top: 12px;
   left: calc(50% - 11px);
 }
-.main__overview__article__media_2_top__img {
+.main__overview__article--products .overview__article__media__top__img {
   width: min(62px, 100%);
   height: auto;
   display: inline-block;
   transform: scale(1);
 }
-.main__overview__article__media_3__img {
+.main__overview__article--posts {
+  position: relative;
+}
+.main__overview__article--posts .overview__article__media__bottom__img {
   width: min(62px, 100%);
   height: auto;
   display: inline-block;
 }
-.main__overview__article__media_3_top {
+.main__overview__article--posts .overview__article__media__top {
   position: absolute;
   top: 6px;
   left: calc(50% - 1px);
 }
-.main__overview__article__media_3_top__img {
+.main__overview__article--posts .overview__article__media__top__img {
   width: min(62px, 100%);
   height: auto;
   display: inline-block;
   transform: scale(1);
 }
-.main__overview__article__content_primary {
+.main__overview .overview__article__content--primary {
   font-family: Raleway;
   font-size: 1.2rem;
   font-weight: 800;
@@ -135,7 +144,7 @@
   letter-spacing: 5.9600000381px;
   text-align: center;
 }
-.main__overview__article__content_secondary {
+.main__overview .overview__article__content--secondary {
   font-family: Raleway;
   font-size: 1.3rem;
   font-weight: 400;
