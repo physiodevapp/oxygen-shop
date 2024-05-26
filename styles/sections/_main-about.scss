@@ -54,9 +54,8 @@
 
 .main__about {
   background-color: $color-4;
-  background-color: #F7F7F7;
   padding-top: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 0.5em;
 
   &__article--laptop {
     @include about-article(min(192px, 100%), 6, 0, calc(50% + 10px), 0, min(192px, 100%), 1);
