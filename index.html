@@ -144,6 +144,21 @@
         <input class="contact__form__input" id="name" name="name" type="text">
         <label class="contact__form__label" for="email">Email</label>
         <input class="contact__form__input" id="email" name="email" type="email">
+        <div class="contact__form__checkbox">
+          <div class="checkbox__box">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+              <symbol id="checkmark" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" fill="none"  d="M22.9 3.7l-15.2 16.6-6.6-7.1">
+                </path>
+              </symbol>
+            </svg>
+            <input id="consent" name="consent" type="checkbox" class="checkbox__box__input"/>
+            <label for="consent">
+              <svg><use xlink:href="#checkmark" /></svg>       
+            </label>
+          </div>
+          <label class="checkbox__label" for="consent">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</label>
+        </div>
         <button class="contact__form__submit" type="submit">Send</button>
       </form>
     </section>

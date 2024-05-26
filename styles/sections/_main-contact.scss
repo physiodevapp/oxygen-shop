@@ -49,43 +49,125 @@
   }
 
   &__form {
-    text-align: right;
 
     .contact__form__label {
-      display: block;
       font-family: Open Sans;
       font-size: 11px;
       font-weight: 600;
       line-height: 14.98px;
-      letter-spacing: 3.2799999713897705px;
       text-align: left;
-      text-transform: uppercase;
-      color: $color-1;
       margin-top: 3em;
       margin-bottom: 1em;
+      
+      letter-spacing: 3.2799999713897705px;
+      text-transform: uppercase;
+      display: block;
+      color: $color-1;
 
     }
 
     .contact__form__input {
-      display: block;
       width: 100%;
       border: none;
-      border-bottom: 1px solid #95989A;
       height: 28px;
       outline: 0px solid transparent;
+      
+      display: block;
+      border-bottom: 1px solid #95989A;
+      
+    }
+
+    .contact__form__checkbox {
+      margin-top: 3em;;
+    }
+
+    .checkbox__label {
+      font-family: Open Sans;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16.34px;
+      text-align: left;
+      
+      display: inline-block;
+      letter-spacing: unset;
+      text-transform: unset;
+      color: #707070;
+      width: 85%;
+      margin-left: 0.6em;
+    }
+
+    /* HTML5 Boilerplate accessible hidden styles */
+    .checkbox__box__input {
+      border: 0; 
+      clip: rect(0 0 0 0); 
+      height: 1px; 
+      margin: -1px; 
+      overflow: hidden; 
+      padding: 0; 
+      position: absolute; 
+      width: 1px;
+    }
+
+    .checkbox__box {
+      display: inline-block;
+      vertical-align: top;
+      width: 24px;
+      height: 24px;
+
+      input:checked + label > svg {
+        height: 100%
+      }
+      
+      label:active::after {
+        background-color: $color-4;
+      }
+      
+      label {
+        color: #707070;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+
+        &:after {
+          content: "";
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+          border: 2px solid #95989A;
+          border-radius: 0.3em;
+          box-sizing: border-box;
+
+        }
+      }
+      svg {
+        stroke: $color-1;
+        stroke-width: 2px;
+        height: 0; //Firefox fix
+        width: 60%;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        stroke-dasharray: 33; //Firefox fix
+        transform: rotateY(30deg) translateX(calc(-50% - 1px));
+
+      }
       
     }
 
     .contact__form__submit {
-      width: 226px;
+      width: 17em;
       height: 57px;
-      gap: 0px;
       border-radius: 35px;
-      opacity: 0px;
       background: $color-1;
       box-shadow: 5px 10px 14px 0px #07ACE64A;
       border: none;
       color: white;
+      position: relative;
+      left: 100%;
+      transform: translateX(-100%);
+      margin-top: 2.4em;
 
     }
 

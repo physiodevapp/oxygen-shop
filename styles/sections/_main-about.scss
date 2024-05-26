@@ -1,9 +1,5 @@
 
 
-@mixin bottom-media($z-index-bottom) {
-  position: relative;
-  z-index: $z-index-bottom;
-}
 
 @mixin bottom-image($bottom-padding-top, $bottom-width, $z-index-bottom) {
   width: $bottom-width;
@@ -14,24 +10,17 @@
   z-index: $z-index-bottom;
 }
 
-@mixin top-media($top, $left, $z-index-top) {
-  position: absolute;
-  top: $top;
-  left: $left;
-  z-index: $z-index-top;
-}
-
-@mixin top-image($scale, $top, $left, $z-index-top) {
+@mixin top-image($top-width, $top, $left, $z-index-top) {
   height: auto;
+  width: $top-width;
   display: inline-block;
-  transform: scale($scale);
   position: absolute;
   top: $top;
   left: $left;
   z-index: $z-index-top;
 }
 
-@mixin about-article($container-margin-top, $bottom-padding-top, $bottom-width, $z-index-bottom, $top, $left, $z-index-top, $scale) {
+@mixin about-article($container-margin-top, $bottom-padding-top, $bottom-width, $z-index-bottom, $top-width, $top, $left, $z-index-top) {
   position: relative;
   margin: 0 2em 2.8em;
   background-color: white;
@@ -50,7 +39,7 @@
     }
 
     &__top__img {      
-      @include top-image($scale, $top, $left, $z-index-top);
+      @include top-image($top-width, $top, $left, $z-index-top);
       
     }
   }
@@ -62,16 +51,16 @@
   padding-bottom: 0.5em;
 
   &__article--laptop {
-    @include about-article(1em, 1.2em, min(192px, 100%), 6, 0, calc(50% + 10px), 0, 1);
+    @include about-article(1em, 1.2em, min(192px, 100%), 6, 89px, 0, calc(50% + 10px), 0);
   }
 
   &__article--mobile {
-    @include about-article(0.6em, 0, min(131px, 100%), 0, 6px, calc(50% - 65px), 1, 1);
+    @include about-article(0.6em, 0, min(131px, 100%), 0, 175px, 6px, calc(50% - 65px), 1);
   }
 
   &__article--trumpet {
-    // $container-margin-top, $bottom-padding-top, $bottom-width, $z-index-bottom, $top, $left, $z-index-top, $scale
-    @include about-article(0, 0, 100%, 0, 0, -2em, 1, 0.8);
+    // $container-margin-top, $bottom-padding-top, $bottom-width, $z-index-bottom, $top-width, $top, $left, $z-index-top
+    @include about-article(0, 0, 100%, 0, 100%, 1.4em, -1em, 1);
   }
 
   .about__article__content--primary {
