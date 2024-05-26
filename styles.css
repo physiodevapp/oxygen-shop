@@ -80,6 +80,7 @@
   font-weight: 300;
   line-height: 35px;
   text-align: center;
+  margin: 0 2.4em;
   margin-bottom: 1.3em;
 }
 .main__overview__article--entries {
@@ -125,6 +126,7 @@
 .main__overview__article--posts {
   position: relative;
   margin-bottom: 1.4em;
+  margin-bottom: 4em;
 }
 .main__overview__article--posts .overview__article__media__bottom__img {
   width: min(62px, 100%);
@@ -168,7 +170,7 @@
 }
 .main__about__article--laptop {
   position: relative;
-  margin: 0 30px 35px 30px;
+  margin: 0 2em 2.8em 2em;
   background-color: white;
   border: 1px solid #E8E9ED;
   padding: 0 21px 25px 21px;
@@ -197,7 +199,7 @@
 }
 .main__about__article--mobile {
   position: relative;
-  margin: 0 30px 35px 30px;
+  margin: 0 2em 2.8em 2em;
   background-color: white;
   border: 1px solid #E8E9ED;
   padding: 0 21px 25px 21px;
@@ -226,7 +228,7 @@
 }
 .main__about__article--trumpet {
   position: relative;
-  margin: 0 30px 35px 30px;
+  margin: 0 2em 2.8em 2em;
   background-color: white;
   border: 1px solid #E8E9ED;
   padding: 0 21px 25px 21px;
@@ -259,6 +261,7 @@
   font-weight: 400;
   line-height: 35.22px;
   text-align: left;
+  margin-top: 1em;
 }
 .main__about .about__article__content--secondary {
   font-family: Open Sans;
@@ -291,6 +294,10 @@
 }
 .main__pricing__article--basic .pricing__article__pack {
   display: inline-block;
+  width: 45%;
+  position: relative;
+  left: -0.4em;
+  top: 0.3em;
 }
 .main__pricing__article--basic .pricing__article__pack__title {
   font-family: Raleway;
@@ -303,6 +310,7 @@
   font-size: 46px;
   font-weight: 300;
   line-height: 64px;
+  color: #EB476E;
 }
 .main__pricing__article--basic .pricing__article__pack__offer {
   font-family: Raleway;
@@ -314,7 +322,7 @@
   display: inline-block;
   position: relative;
   top: 2.4em;
-  left: 2em;
+  left: 0em;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -326,6 +334,9 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 19.07px;
+}
+.main__pricing__article--basic .pricing__article__features__item__img {
+  margin-right: 0.8em;
 }
 .main__pricing__article--basic .pricing__article__button {
   position: absolute;
@@ -350,6 +361,10 @@
 }
 .main__pricing__article--professional .pricing__article__pack {
   display: inline-block;
+  width: 45%;
+  position: relative;
+  left: -0.1em;
+  top: 1.6em;
 }
 .main__pricing__article--professional .pricing__article__pack__title {
   font-family: Raleway;
@@ -362,6 +377,7 @@
   font-size: 46px;
   font-weight: 300;
   line-height: 64px;
+  color: #08A6E4;
 }
 .main__pricing__article--professional .pricing__article__pack__offer {
   font-family: Raleway;
@@ -373,7 +389,7 @@
   display: inline-block;
   position: relative;
   top: 2.4em;
-  left: 2em;
+  left: 0em;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -385,6 +401,9 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 19.07px;
+}
+.main__pricing__article--professional .pricing__article__features__item__img {
+  margin-right: 0.8em;
 }
 .main__pricing__article--professional .pricing__article__button {
   position: absolute;
@@ -409,6 +428,10 @@
 }
 .main__pricing__article--premium .pricing__article__pack {
   display: inline-block;
+  width: 45%;
+  position: relative;
+  left: -0.2em;
+  top: 1.8em;
 }
 .main__pricing__article--premium .pricing__article__pack__title {
   font-family: Raleway;
@@ -421,6 +444,7 @@
   font-size: 46px;
   font-weight: 300;
   line-height: 64px;
+  color: #55DFB4;
 }
 .main__pricing__article--premium .pricing__article__pack__offer {
   font-family: Raleway;
@@ -432,7 +456,7 @@
   display: inline-block;
   position: relative;
   top: 2.4em;
-  left: 2em;
+  left: 0em;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -444,6 +468,9 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 19.07px;
+}
+.main__pricing__article--premium .pricing__article__features__item__img {
+  margin-right: 0.8em;
 }
 .main__pricing__article--premium .pricing__article__button {
   position: absolute;

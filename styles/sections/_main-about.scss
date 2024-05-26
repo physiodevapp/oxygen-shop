@@ -28,7 +28,7 @@
 
 @mixin about-article($bottom-width, $z-index-bottom, $top, $left, $z-index-top, $top-width, $scale) {
   position: relative;
-  margin: 0 30px 35px 30px;
+  margin: 0 2em 2.8em 2em;
   background-color: white;
   border: 1px solid #E8E9ED;
   padding: 0 21px 25px 21px;
@@ -75,6 +75,7 @@
     font-weight: 400;
     line-height: 35.22px;
     text-align: left;
+    margin-top: 1em;
     
   }
 
