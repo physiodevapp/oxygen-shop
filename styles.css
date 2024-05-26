@@ -548,6 +548,7 @@
 }
 .main__contact__form .contact__form__checkbox {
   margin-top: 3em;
+  display: block;
 }
 .main__contact__form .checkbox__label {
   font-family: Open Sans;
