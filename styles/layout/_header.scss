@@ -1,8 +1,9 @@
 
 .header {
   position: relative;
-  top: 170px;
+  top: 70px;
   text-align: center;
+  padding-top: 5.8em;
 
   &__title {
     font-family: Raleway;
@@ -20,6 +21,7 @@
     font-weight: 400;
     line-height: 23px;
     text-align: center;
+    margin: 0 2.6em;
     margin-bottom: 2em;
     
   }

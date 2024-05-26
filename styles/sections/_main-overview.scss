@@ -14,7 +14,6 @@
 
 @mixin overview-article($top, $left, $scale) {
   position: relative;
-  margin-bottom: 1.4em;
 
   .overview__article__media {
     &__bottom {
@@ -55,11 +54,13 @@
 
   &__article--entries {
     @include overview-article(-8px, calc(50% - 25px), 0.7);
+    margin-bottom: 1.4em;
 
   }
 
   &__article--products {
     @include overview-article(12px, calc(50% - 11px), 1);
+    margin-bottom: 1.4em;
 
   }
 

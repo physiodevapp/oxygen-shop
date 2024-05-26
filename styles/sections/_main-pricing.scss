@@ -96,7 +96,7 @@
   }
 
   &__article--professional {
-    @include pricing-article-card($color-1, 45%, -0.1em, 1.6em);
+    @include pricing-article-card($color-1, 44%, -0.1em, 1.6em);
   }
 
   &__article--premium {

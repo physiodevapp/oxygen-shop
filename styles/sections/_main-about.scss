@@ -5,11 +5,13 @@
   z-index: $z-index-bottom;
 }
 
-@mixin bottom-image($bottom-width) {
+@mixin bottom-image($bottom-padding-top, $bottom-width, $z-index-bottom) {
   width: $bottom-width;
   height: auto;
   display: inline-block;
-  padding-top: 19px;
+  padding-top: $bottom-padding-top;
+  position: relative;
+  z-index: $z-index-bottom;
 }
 
 @mixin top-media($top, $left, $z-index-top) {
@@ -19,35 +21,37 @@
   z-index: $z-index-top;
 }
 
-@mixin top-image($top-width, $scale) {
-  width: $top-width;
+@mixin top-image($scale, $top, $left, $z-index-top) {
   height: auto;
   display: inline-block;
   transform: scale($scale);
+  position: absolute;
+  top: $top;
+  left: $left;
+  z-index: $z-index-top;
 }
 
-@mixin about-article($bottom-width, $z-index-bottom, $top, $left, $z-index-top, $top-width, $scale) {
+@mixin about-article($container-margin-top, $bottom-padding-top, $bottom-width, $z-index-bottom, $top, $left, $z-index-top, $scale) {
   position: relative;
-  margin: 0 2em 2.8em 2em;
+  margin: 0 2em 2.8em;
   background-color: white;
   border: 1px solid #E8E9ED;
-  padding: 0 21px 25px 21px;
+
+  .about__article__media__container {
+    position: relative;
+    margin-top: $container-margin-top;
+  }
 
   .about__article__media {
-    &__bottom {
-      @include bottom-media($z-index-bottom);
 
-      &__img {
-        @include bottom-image($bottom-width);
-      }
+    &__bottom__img {
+      @include bottom-image($bottom-padding-top, $bottom-width, $z-index-bottom);
+      
     }
 
-    &__top {      
-      @include top-media($top, $left, $z-index-top);
-
-      &__img {
-        @include top-image($top-width, $scale);
-      }
+    &__top__img {      
+      @include top-image($scale, $top, $left, $z-index-top);
+      
     }
   }
 }
@@ -58,15 +62,16 @@
   padding-bottom: 0.5em;
 
   &__article--laptop {
-    @include about-article(min(192px, 100%), 6, 0, calc(50% + 10px), 0, min(192px, 100%), 1);
+    @include about-article(1em, 1.2em, min(192px, 100%), 6, 0, calc(50% + 10px), 0, 1);
   }
 
   &__article--mobile {
-    @include about-article(min(131px, 100%), 0, 25px, calc(50% - 65px), 1, min(175px, 100%), 1);
+    @include about-article(0.6em, 0, min(131px, 100%), 0, 6px, calc(50% - 65px), 1, 1);
   }
 
   &__article--trumpet {
-    @include about-article(0, 0, 0, 0, 0, 0, 0);
+    // $container-margin-top, $bottom-padding-top, $bottom-width, $z-index-bottom, $top, $left, $z-index-top, $scale
+    @include about-article(0, 0, 100%, 0, 0, -2em, 1, 0.8);
   }
 
   .about__article__content--primary {
@@ -76,6 +81,7 @@
     line-height: 35.22px;
     text-align: left;
     margin-top: 1em;
+    padding: 0 1em;
     
   }
 
@@ -85,16 +91,8 @@
     font-weight: 400;
     line-height: 21px;
     text-align: left;
+    padding: 0 1.2em 1.6em 1.2em;
 
   }
 
-  // &__media_container {
-  //   position: relative;
-  //   height: 195px;
-  //   margin: 0 30px 35px 30px;
-  //   background-color: #55DFB4;
-  //   border: 1px solid #E8E9ED;
-  //   padding: 0 21px 25px 21px;
-  //   margin-top: -35px;
-  // }
 }
