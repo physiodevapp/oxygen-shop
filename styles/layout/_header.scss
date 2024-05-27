@@ -1,4 +1,15 @@
 
+.test {
+  display: block;
+  border: 1px solid red;
+  
+  height: 37vw;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("./images/Background 1.jpg");
+}
+
 .header {
   position: relative;
   top: 70px;
@@ -42,9 +53,14 @@
     margin-bottom: 3em;
   }
 
-  &__media__img {
-    width: min(500px, 100%);
-    height: auto;
-    display: inline-block;
+  &__media {
+    display: block;
+    height: max(72vw, 15em);
+    max-height: 350px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("./images/Background 1.jpg");
   }
+
 }
