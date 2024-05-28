@@ -14,3 +14,42 @@
 body { 
   min-width: 320px;
 }
+
+@media only screen and (min-width: 1000px) {
+  
+  .header {
+    padding-top: 6.2em;
+    
+    &__title {
+      font-size: 3em;
+    }
+
+    &__button {
+      width: 27.5em;
+    }
+
+    &__media {
+      height: 37vw;
+      background-size: cover;
+      background-image: url("./images/Background 2.png");
+    }
+  }
+
+  .main__overview {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__title {
+      margin: 3em auto 3em;
+      width: 100%;
+    }
+
+    &__article--entries, &__article--products,&__article--posts {
+      margin: 0 4.5em 7em;
+    }
+
+  }
+
+}
