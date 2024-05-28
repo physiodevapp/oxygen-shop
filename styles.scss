@@ -5,6 +5,21 @@
 @import "./styles/layout/main.scss";
 @import "./styles/layout/footer.scss";
 
+@mixin pricing-article-hover($color) {
+  box-shadow: 5px 10px 27px 0px rgba($color, 0.3);
+  width: 405px;
+  height: 524px;
+  top: -1em;
+
+  .pricing__article__button {
+    width: 165px;
+    height: 50px;
+    border-radius: 23px;
+    box-shadow: 5px 10px 14px 0px rgba($color, 0.3);
+  }
+
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -187,6 +202,61 @@ body {
 
     .article__container__content__hr {
         display: block;
+    }
+
+  }
+
+  .main__pricing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__title { 
+      width: 100%;
+      margin-bottom: 1.5em;
+      margin-top: 3em;
+      
+    }
+
+    &__article--basic, &__article--professional, &__article--premium {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 485px;
+      width: 372px;
+      margin: 0 2em 3.5em;
+      padding-top: 2em;
+      
+    }
+
+    .pricing__article {
+      
+      &__pack {
+        top: 0em;
+      }
+
+      &__features {
+        top: 0em;
+        margin-bottom: 3em;
+      }
+
+      &__features__item {
+        padding-bottom: 1.8em;
+      }
+    }
+
+    &__article--basic:hover {
+      @include pricing-article-hover($color-2);
+    }
+
+    &__article--professional:hover {
+      @include pricing-article-hover($color-1);
+    }
+
+    &__article--premium:hover {
+      @include pricing-article-hover($color-3);
     }
 
   }
