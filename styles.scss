@@ -307,4 +307,14 @@ body {
 
   }
 
+  .footer {
+    &__text {
+      margin-left: 8.5em;
+    }
+
+    &__social-media {
+      margin-right: 10em;
+    }
+  }
+
 }
