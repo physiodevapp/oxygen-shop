@@ -75,7 +75,8 @@ body {
     }
 
     &__media {
-      height: 37vw;
+      height: 31vw;
+      max-height: 594px;
       background-size: cover;
       background-image: url("./images/Background 2.png");
     }
