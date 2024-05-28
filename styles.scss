@@ -261,4 +261,60 @@ body {
 
   }
 
+  .main__contact {
+    height: 376px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 896px;
+    margin: 6em auto 5em;
+    justify-content: flex-start;
+
+    &__title {
+      width: 50%;
+      margin-top: 0;
+      font-size: 3em;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+
+      .contact__info__mail {
+        display: inline-block;
+      }
+      
+      .contact__info__tel {
+        display: inline-block;
+        margin-left: -1em;
+      }
+
+    }
+
+    &__form {
+      width: 50%;
+
+      .contact__form__label[for="name"] {
+        margin-top: 0;
+      }
+
+      .contact__form__checkbox {
+        margin-top: 2em;
+      }
+
+    }
+
+  }
+
+  .footer {
+    &__text {
+      margin-left: 8.5em;
+    }
+
+    &__social-media {
+      margin-right: 10em;
+    }
+  }
+
 }
