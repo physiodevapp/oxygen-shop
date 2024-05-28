@@ -33,4 +33,35 @@
     right: 0;
   }
 
+  &__menu-sections {
+    display: none;
+    top: 0;
+    right: 0;
+    height: 100%;
+    position: absolute;
+    flex-direction: row;
+    list-style-type: none;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &__item {
+      position: relative;
+      align-self: center;
+      padding: 0 2em;
+      font-family: Open Sans;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 70px;
+      letter-spacing: 3.2799999713897705px;
+      text-align: center;
+      color: #A5A5A5;
+
+      hr {
+        border: none;
+      }
+
+    }
+
+  }
+
 }
