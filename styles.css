@@ -200,113 +200,91 @@
   padding-top: 40px;
   padding-bottom: 0.5em;
 }
-.main__about__article--laptop {
+.main__about__article {
   position: relative;
   margin: 0 2em 2.8em;
   background-color: white;
   border: 1px solid #E8E9ED;
 }
-.main__about__article--laptop .about__article__media__container--landscape {
+.main__about__article .about__article__media__container--landscape {
   display: none;
 }
-.main__about__article--laptop .about__article__media__container--mobile {
+.main__about__article .about__article__media__container--mobile {
   position: relative;
+}
+.main__about__article .article__container__content__hr {
+  display: none;
+  width: 327px;
+  margin-top: 2em;
+}
+.main__about__article.laptop .about__article__media__container--mobile {
   margin-top: 1em;
 }
-.main__about__article--laptop .about__article__media__bottom__img {
-  width: min(192px, 100%);
+.main__about__article.laptop .about__article__media__bottom__img {
   height: auto;
   display: inline-block;
-  padding-top: 1.2em;
   position: relative;
+  width: min(192px, 100%);
+  padding-top: 1.2em;
   z-index: 6;
 }
-.main__about__article--laptop .about__article__media__top__img {
+.main__about__article.laptop .about__article__media__top__img {
   height: auto;
-  width: 89px;
   display: inline-block;
   position: absolute;
+  width: 89px;
   top: 0;
   left: calc(50% + 10px);
   z-index: 0;
 }
-.main__about__article--laptop .article__container__content__hr {
-  display: none;
-  width: 327px;
+.main__about__article.laptop .article__container__content__hr {
   border: 2px solid rgb(235, 71, 110);
-  margin-top: 2em;
 }
-.main__about__article--mobile {
-  position: relative;
-  margin: 0 2em 2.8em;
-  background-color: white;
-  border: 1px solid #E8E9ED;
-}
-.main__about__article--mobile .about__article__media__container--landscape {
-  display: none;
-}
-.main__about__article--mobile .about__article__media__container--mobile {
-  position: relative;
+.main__about__article.mobile .about__article__media__container--mobile {
   margin-top: 0.6em;
 }
-.main__about__article--mobile .about__article__media__bottom__img {
-  width: min(131px, 100%);
+.main__about__article.mobile .about__article__media__bottom__img {
   height: auto;
   display: inline-block;
-  padding-top: 0;
   position: relative;
+  width: min(131px, 100%);
+  padding-top: 0;
   z-index: 0;
 }
-.main__about__article--mobile .about__article__media__top__img {
+.main__about__article.mobile .about__article__media__top__img {
   height: auto;
-  width: 175px;
   display: inline-block;
   position: absolute;
+  width: 175px;
   top: 6px;
   left: calc(50% - 65px);
   z-index: 1;
 }
-.main__about__article--mobile .article__container__content__hr {
-  display: none;
-  width: 327px;
+.main__about__article.mobile .article__container__content__hr {
   border: 2px solid rgb(8, 166, 228);
-  margin-top: 2em;
 }
-.main__about__article--trumpet {
-  position: relative;
-  margin: 0 2em 2.8em;
-  background-color: white;
-  border: 1px solid #E8E9ED;
-}
-.main__about__article--trumpet .about__article__media__container--landscape {
-  display: none;
-}
-.main__about__article--trumpet .about__article__media__container--mobile {
-  position: relative;
+.main__about__article.trumpet .about__article__media__container--mobile {
   margin-top: 0;
 }
-.main__about__article--trumpet .about__article__media__bottom__img {
-  width: 100%;
+.main__about__article.trumpet .about__article__media__bottom__img {
   height: auto;
   display: inline-block;
-  padding-top: 0;
   position: relative;
+  width: 100%;
+  padding-top: 0;
   z-index: 0;
 }
-.main__about__article--trumpet .about__article__media__top__img {
+.main__about__article.trumpet .about__article__media__top__img {
   height: auto;
-  width: 100%;
   display: inline-block;
   position: absolute;
+  width: 100%;
   top: 1.4em;
   left: -1em;
   z-index: 1;
 }
-.main__about__article--trumpet .article__container__content__hr {
-  display: none;
-  width: 327px;
+.main__about__article.trumpet .article__container__content__hr {
   border: 2px solid rgb(85, 223, 180);
-  margin-top: 2em;
 }
 .main__about .about__article__container {
   padding: 0 2em 1.6em;
@@ -714,83 +692,92 @@ body {
   .main__about .article__container__content--primary, .main__about .article__container__content--secondary {
     margin-top: 3em !important;
   }
-  .main__about__article--laptop, .main__about__article--mobile, .main__about__article--trumpet {
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto 2em;
-    max-width: 1126px;
-    height: 370px;
-  }
   .main__about .about__article__container, .main__about .about__article__media__container {
     width: 50%;
   }
   .main__about .about__article__media__container--mobile {
     display: none;
   }
-  .main__about__article--laptop {
+  .main__about__article {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto 2em;
+    max-width: 1126px;
+    height: 370px;
+  }
+  .main__about__article.laptop {
     flex-direction: row-reverse;
     justify-content: space-between;
   }
-  .main__about__article--laptop .about__article__media__container--landscape {
+  .main__about__article.laptop .article__container__content--secondary {
+    padding-right: 8em;
+  }
+  .main__about__article.laptop .about__article__media__container--landscape {
     display: inline-block;
     position: relative;
     margin-bottom: 2em;
   }
-  .main__about__article--laptop .about__article__media__container--landscape .about__article__media__bottom__img {
+  .main__about__article.laptop .about__article__media__container--landscape .about__article__media__bottom__img {
     width: 100%;
     max-width: 320px;
     margin-right: 7.5em;
     margin-top: 7em;
     padding-top: 0;
   }
-  .main__about__article--laptop .about__article__media__container--landscape .about__article__media__top__img {
+  .main__about__article.laptop .about__article__media__container--landscape .about__article__media__top__img {
     width: 255px;
     top: 1.8em;
     left: 7em;
   }
-  .main__about__article--mobile {
+  .main__about__article.mobile {
     justify-content: space-between;
   }
-  .main__about__article--mobile .about__article__media__container--landscape {
+  .main__about__article.mobile .about__article__container {
+    width: 41%;
+  }
+  .main__about__article.mobile .about__article__media__container--landscape {
     display: inline-block;
     position: relative;
     margin-bottom: 2em;
   }
-  .main__about__article--mobile .about__article__media__container--landscape .about__article__media__bottom__img {
+  .main__about__article.mobile .about__article__media__container--landscape .about__article__media__bottom__img {
     width: 100%;
     max-width: 320px;
     margin-left: 4.3em;
     margin-top: 0.8em;
   }
-  .main__about__article--mobile .about__article__media__container--landscape .about__article__media__top__img {
+  .main__about__article.mobile .about__article__media__container--landscape .about__article__media__top__img {
     width: 426px;
     top: 1.8em;
     left: 4.5em;
   }
-  .main__about__article--trumpet {
+  .main__about__article.trumpet {
     background: transparent;
     border: unset;
   }
-  .main__about__article--trumpet .about__article__container {
+  .main__about__article.trumpet .article__container__content--secondary {
+    padding-right: 11em;
+  }
+  .main__about__article.trumpet .about__article__container {
     background: white;
     border: 1px solid #E8E9ED;
     flex-grow: 1;
   }
-  .main__about__article--trumpet .about__article__media__container {
+  .main__about__article.trumpet .about__article__media__container {
     margin-left: 2em;
     width: 40%;
   }
-  .main__about__article--trumpet .about__article__media__container--landscape {
+  .main__about__article.trumpet .about__article__media__container--landscape {
     display: inline-block;
     position: relative;
     margin-top: 0;
     margin-left: 3.5em;
     width: 40%;
   }
-  .main__about__article--trumpet .about__article__media__container--landscape .about__article__media__bottom__img {
+  .main__about__article.trumpet .about__article__media__container--landscape .about__article__media__bottom__img {
     height: 100%;
   }
-  .main__about__article--trumpet .about__article__media__container--landscape .about__article__media__top__img {
+  .main__about__article.trumpet .about__article__media__container--landscape .about__article__media__top__img {
     transform: scale(0.7) translate(-50%, -50%);
     transform-origin: top left;
     top: 56%;
