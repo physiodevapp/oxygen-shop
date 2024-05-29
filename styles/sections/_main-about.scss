@@ -79,6 +79,9 @@
     }
 
     &.trumpet {
+
+      @include about-article(0, 0, 100%, 0, 100%, 0, 0, 1, $color-3);
+      
       .about__article__media__top__img {
         max-width: 550px;
         top: 50%;
@@ -87,7 +90,6 @@
         transform: translate(-53%, -36%);
       }
 
-      @include about-article(0, 0, 100%, 0, 100%, 0, 0, 1, $color-3);
       
     }
   
