@@ -72,10 +72,11 @@ body {
 
     &__button {
       width: 27.5em;
+      margin: 0;
     }
 
     &__media {
-      height: 31vw;
+      height: 41vw;
       max-height: 594px;
       background-size: cover;
       background-image: url("./images/Background 2.png");
@@ -89,7 +90,7 @@ body {
     justify-content: center;
 
     &__title {
-      margin: 3em auto 3em;
+      margin: 0em auto 3em;
       width: 100%;
     }
 
@@ -104,6 +105,7 @@ body {
     flex-direction: column;
     padding-left: 4em;
     padding-right: 4em;
+    padding-bottom: 3em;
 
     .article__container__content--primary, .article__container__content--secondary {
       margin-top: 3em !important;
@@ -211,7 +213,7 @@ body {
         display: inline-block;
         position: relative;
         margin-top: 0;
-        margin-left: 2em;
+        margin-left: 3.5em;
         width: 40%;
 
         .about__article__media {
