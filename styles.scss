@@ -191,4 +191,119 @@ body {
 
   }
 
+  .main__pricing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__title { 
+      width: 100%;
+      margin-bottom: 1.5em;
+      margin-top: 3em;
+      
+    }
+
+    &__article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 485px;
+      width: 372px;
+      margin: 0 2em 3.5em;
+      padding-top: 2em;
+      
+    }
+
+    .pricing__article {
+      
+      &__pack {
+        top: 0em;
+      }
+
+      &__features {
+        top: 0em;
+        margin-bottom: 3em;
+      }
+
+      &__features__item {
+        padding-bottom: 1.8em;
+      }
+    }
+
+    &__article--basic:hover {
+      @include pricing-article-hover($color-2);
+    }
+
+    &__article--professional:hover {
+      @include pricing-article-hover($color-1);
+    }
+
+    &__article--premium:hover {
+      @include pricing-article-hover($color-3);
+    }
+
+  }
+
+  .main__contact {
+    height: 376px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 896px;
+    margin: 6em auto 5em;
+    justify-content: flex-start;
+
+    &__title {
+      width: 50%;
+      margin-top: 0;
+      font-size: 3rem;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+
+      .contact__info__mail {
+        display: inline-block;
+      }
+      
+      .contact__info__tel {
+        display: inline-block;
+        margin-left: 1em;
+      }
+
+    }
+
+    &__form {
+      width: 50%;
+
+      .contact__form__label[for="name"] {
+        margin-top: 0;
+      }
+
+      .contact__form__checkbox {
+        margin-top: 2em;
+      }
+
+      .checkbox__label {
+        width: 90.5%;
+      }
+
+    }
+
+  }
+
+  .footer {
+    &__text {
+      margin-left: 8.5em;
+    }
+
+    &__social-media {
+      margin-right: 10em;
+    }
+  }
+
 }
