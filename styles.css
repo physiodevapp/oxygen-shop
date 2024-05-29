@@ -279,12 +279,19 @@
   display: inline-block;
   position: absolute;
   width: 100%;
-  top: 1.4em;
-  left: -1em;
+  top: 0;
+  left: 0;
   z-index: 1;
 }
 .main__about__article.trumpet .article__container__content__hr {
   border: 2px solid rgb(85, 223, 180);
+}
+.main__about__article.trumpet .about__article__media__top__img {
+  max-width: 550px;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  transform: translate(-53%, -36%);
 }
 .main__about .about__article__container {
   padding: 0 2em 1.6em;
