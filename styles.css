@@ -282,7 +282,6 @@
   margin-bottom: 0.4em;
 }
 .main__pricing__article {
-.main__pricing__article {
   position: relative;
   width: 293px;
   height: 251px;
@@ -292,18 +291,15 @@
   margin-bottom: 3.5em;
 }
 .main__pricing__article .pricing__article__pack {
-.main__pricing__article .pricing__article__pack {
   display: inline-block;
   position: relative;
 }
-.main__pricing__article .pricing__article__pack__title {
 .main__pricing__article .pricing__article__pack__title {
   font-family: Raleway;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
 }
-.main__pricing__article .pricing__article__pack__value {
 .main__pricing__article .pricing__article__pack__value {
   font-family: Open Sans;
   font-size: 46px;
@@ -312,13 +308,11 @@
   color: #EB476E;
 }
 .main__pricing__article .pricing__article__pack__offer {
-.main__pricing__article .pricing__article__pack__offer {
   font-family: Raleway;
   font-size: 12px;
   font-weight: 700;
   line-height: 14.09px;
 }
-.main__pricing__article .pricing__article__features {
 .main__pricing__article .pricing__article__features {
   display: inline-block;
   position: relative;
@@ -330,7 +324,6 @@
   text-align: left;
 }
 .main__pricing__article .pricing__article__features__item {
-.main__pricing__article .pricing__article__features__item {
   padding-bottom: 1em;
   font-family: Open Sans;
   font-size: 14px;
@@ -338,10 +331,8 @@
   line-height: 19.07px;
 }
 .main__pricing__article .pricing__article__features__item__img {
-.main__pricing__article .pricing__article__features__item__img {
   margin-right: 0.8em;
 }
-.main__pricing__article .pricing__article__button {
 .main__pricing__article .pricing__article__button {
   position: absolute;
   width: 150px;
@@ -363,7 +354,6 @@
   margin: 0 auto;
   margin-bottom: 3.5em;
 }
-.main__pricing__article.professional .pricing__article__pack {
 .main__pricing__article.professional .pricing__article__pack {
   width: 44%;
   left: -0.1em;
@@ -429,7 +419,6 @@
   margin: 0 auto;
   margin-bottom: 3.5em;
 }
-.main__pricing__article.premium .pricing__article__pack {
 .main__pricing__article.premium .pricing__article__pack {
   width: 45%;
   left: -0.2em;
