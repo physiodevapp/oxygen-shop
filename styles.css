@@ -344,7 +344,6 @@
   width: 293px;
   height: 251px;
   border-radius: 18px;
-  border: 1px solid rgb(235, 71, 110);
   margin: 0 auto;
   margin-bottom: 3.5em;
 }
@@ -363,7 +362,6 @@
   font-size: 2.9rem;
   font-weight: 300;
   line-height: 64px;
-  color: rgb(235, 71, 110);
 }
 .main__pricing__article .pricing__article__pack__offer {
   font-family: Raleway;
@@ -399,7 +397,6 @@
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
-  background-color: rgb(235, 71, 110);
   color: white;
   border: none;
   font-family: Open Sans;
@@ -407,143 +404,47 @@
   font-weight: 700;
   cursor: pointer;
 }
-.main__pricing__article--professional {
-  position: relative;
-  width: 293px;
-  height: 251px;
-  border-radius: 18px;
+.main__pricing__article.basic {
+  border: 1px solid rgb(235, 71, 110);
+}
+.main__pricing__article.basic .pricing__article__pack {
+  width: 45%;
+  left: -0.4em;
+  top: 0.3em;
+}
+.main__pricing__article.basic .pricing__article__pack__value {
+  color: rgb(235, 71, 110);
+}
+.main__pricing__article.basic .pricing__article__button {
+  background-color: rgb(235, 71, 110);
+}
+.main__pricing__article.professional {
   border: 1px solid rgb(8, 166, 228);
-  margin: 0 auto;
-  margin-bottom: 3.5em;
 }
 .main__pricing__article.professional .pricing__article__pack {
   width: 44%;
   left: -0.1em;
   top: 1.6em;
 }
-.main__pricing__article--professional .pricing__article__pack__title {
-  font-family: Raleway;
-  font-size: 1.3rem;
-  font-weight: 700;
-  line-height: 24px;
-}
-.main__pricing__article--professional .pricing__article__pack__value {
-  font-family: Open Sans;
-  font-size: 2.9rem;
-  font-weight: 300;
-  line-height: 64px;
+.main__pricing__article.professional .pricing__article__pack__value {
   color: rgb(8, 166, 228);
 }
-.main__pricing__article--professional .pricing__article__pack__offer {
-  font-family: Raleway;
-  font-size: 0.8rem;
-  font-weight: 700;
-  line-height: 14.09px;
-}
-.main__pricing__article--professional .pricing__article__features {
-  display: inline-block;
-  position: relative;
-  top: 2.4em;
-  left: 0em;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-}
-.main__pricing__article--professional .pricing__article__features__item {
-  padding-bottom: 1em;
-  font-family: Open Sans;
-  font-size: 0.9rem;
-  font-weight: 400;
-  line-height: 19.07px;
-}
-.main__pricing__article--professional .pricing__article__features__item__img {
-  margin-right: 0.8em;
-}
-.main__pricing__article--professional .pricing__article__button {
-  position: absolute;
-  width: 150px;
-  height: 50px;
-  border-radius: 1.7em;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 50%);
+.main__pricing__article.professional .pricing__article__button {
   background-color: rgb(8, 166, 228);
-  color: white;
-  border: none;
-  font-family: Open Sans;
-  font-size: 0.9rem;
-  font-weight: 700;
-  cursor: pointer;
 }
-.main__pricing__article--premium {
-  position: relative;
-  width: 293px;
-  height: 251px;
-  border-radius: 18px;
+.main__pricing__article.premium {
   border: 1px solid rgb(85, 223, 180);
-  margin: 0 auto;
-  margin-bottom: 3.5em;
 }
 .main__pricing__article.premium .pricing__article__pack {
   width: 45%;
   left: -0.2em;
   top: 1.8em;
 }
-.main__pricing__article--premium .pricing__article__pack__title {
-  font-family: Raleway;
-  font-size: 1.3rem;
-  font-weight: 700;
-  line-height: 24px;
-}
-.main__pricing__article--premium .pricing__article__pack__value {
-  font-family: Open Sans;
-  font-size: 2.9rem;
-  font-weight: 300;
-  line-height: 64px;
+.main__pricing__article.premium .pricing__article__pack__value {
   color: rgb(85, 223, 180);
 }
-.main__pricing__article--premium .pricing__article__pack__offer {
-  font-family: Raleway;
-  font-size: 0.8rem;
-  font-weight: 700;
-  line-height: 14.09px;
-}
-.main__pricing__article--premium .pricing__article__features {
-  display: inline-block;
-  position: relative;
-  top: 2.4em;
-  left: 0em;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-}
-.main__pricing__article--premium .pricing__article__features__item {
-  padding-bottom: 1em;
-  font-family: Open Sans;
-  font-size: 0.9rem;
-  font-weight: 400;
-  line-height: 19.07px;
-}
-.main__pricing__article--premium .pricing__article__features__item__img {
-  margin-right: 0.8em;
-}
-.main__pricing__article--premium .pricing__article__button {
-  position: absolute;
-  width: 150px;
-  height: 50px;
-  border-radius: 1.7em;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 50%);
+.main__pricing__article.premium .pricing__article__button {
   background-color: rgb(85, 223, 180);
-  color: white;
-  border: none;
-  font-family: Open Sans;
-  font-size: 0.9rem;
-  font-weight: 700;
-  cursor: pointer;
 }
 
 .main__contact {
@@ -908,7 +809,7 @@ body {
     margin-bottom: 1.5em;
     margin-top: 3em;
   }
-  .main__pricing__article--basic, .main__pricing__article--professional, .main__pricing__article--premium {
+  .main__pricing__article {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -928,40 +829,32 @@ body {
   .main__pricing .pricing__article__features__item {
     padding-bottom: 1.8em;
   }
-  .main__pricing__article--basic:hover {
-    box-shadow: 5px 10px 27px 0px rgba(235, 71, 110, 0.3);
+  .main__pricing__article:hover {
     width: 405px;
     height: 524px;
     top: -1em;
   }
-  .main__pricing__article--basic:hover .pricing__article__button {
+  .main__pricing__article:hover .pricing__article__button {
     width: 165px;
     height: 50px;
     border-radius: 23px;
+  }
+  .main__pricing__article:hover.basic {
+    box-shadow: 5px 10px 27px 0px rgba(235, 71, 110, 0.3);
+  }
+  .main__pricing__article:hover.basic .pricing__article__button {
     box-shadow: 5px 10px 14px 0px rgba(235, 71, 110, 0.3);
   }
-  .main__pricing__article--professional:hover {
+  .main__pricing__article:hover.professional:hover {
     box-shadow: 5px 10px 27px 0px rgba(8, 166, 228, 0.3);
-    width: 405px;
-    height: 524px;
-    top: -1em;
   }
-  .main__pricing__article--professional:hover .pricing__article__button {
-    width: 165px;
-    height: 50px;
-    border-radius: 23px;
+  .main__pricing__article:hover.professional:hover .pricing__article__button {
     box-shadow: 5px 10px 14px 0px rgba(8, 166, 228, 0.3);
   }
-  .main__pricing__article--premium:hover {
+  .main__pricing__article:hover.premium:hover {
     box-shadow: 5px 10px 27px 0px rgba(85, 223, 180, 0.3);
-    width: 405px;
-    height: 524px;
-    top: -1em;
   }
-  .main__pricing__article--premium:hover .pricing__article__button {
-    width: 165px;
-    height: 50px;
-    border-radius: 23px;
+  .main__pricing__article:hover.premium:hover .pricing__article__button {
     box-shadow: 5px 10px 14px 0px rgba(85, 223, 180, 0.3);
   }
   .main__contact {

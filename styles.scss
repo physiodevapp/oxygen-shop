@@ -7,14 +7,14 @@
 
 @mixin pricing-article-hover($color) {
   box-shadow: 5px 10px 27px 0px rgba($color, 0.3);
-  width: 405px;
-  height: 524px;
-  top: -1em;
+  // width: 405px;
+  // height: 524px;
+  // top: -1em;
 
   .pricing__article__button {
-    width: 165px;
-    height: 50px;
-    border-radius: 23px;
+    // width: 165px;
+    // height: 50px;
+    // border-radius: 23px;
     box-shadow: 5px 10px 14px 0px rgba($color, 0.3);
   }
 
@@ -281,16 +281,30 @@ body {
       }
     }
 
-    &__article--basic:hover {
-      @include pricing-article-hover($color-2);
-    }
+    &__article:hover {
+      
+      width: 405px;
+      height: 524px;
+      top: -1em;
 
-    &__article--professional:hover {
-      @include pricing-article-hover($color-1);
-    }
+      .pricing__article__button {
+        width: 165px;
+        height: 50px;
+        border-radius: 23px;
+      }
+      
+      &.basic {
+        @include pricing-article-hover($color-2);
+      }
 
-    &__article--premium:hover {
-      @include pricing-article-hover($color-3);
+      &.professional:hover {
+        @include pricing-article-hover($color-1);
+      }
+
+      &.premium:hover {
+        @include pricing-article-hover($color-3);
+      }
+
     }
 
   }
