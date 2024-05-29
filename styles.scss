@@ -10,10 +10,11 @@
 
   .pricing__article__button {
     box-shadow: 5px 10px 14px 0px rgba($color, 0.3);
-    
+
   }
 
 }
+
 
 * {
   box-sizing: border-box;
@@ -277,16 +278,7 @@ body {
     }
 
     &__article:hover {
-      
-      width: 405px;
-      height: 524px;
-      top: -1em;
-
-      .pricing__article__button {
-        width: 165px;
-        height: 50px;
-        border-radius: 23px;
-      }
+      transform: scale(1.08); 
       
       &.basic {
         @include pricing-article-hover($color-2);

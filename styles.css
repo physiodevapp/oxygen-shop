@@ -346,6 +346,7 @@
   border-radius: 18px;
   margin: 0 auto;
   margin-bottom: 3.5em;
+  transition: all 0.2s ease-in-out;
 }
 .main__pricing__article .pricing__article__pack {
   display: inline-block;
@@ -830,14 +831,7 @@ body {
     padding-bottom: 1.8em;
   }
   .main__pricing__article:hover {
-    width: 405px;
-    height: 524px;
-    top: -1em;
-  }
-  .main__pricing__article:hover .pricing__article__button {
-    width: 165px;
-    height: 50px;
-    border-radius: 23px;
+    transform: scale(1.08);
   }
   .main__pricing__article:hover.basic {
     box-shadow: 5px 10px 27px 0px rgba(235, 71, 110, 0.3);
