@@ -227,6 +227,7 @@ body {
           .about__article__media {
             &__bottom__img {
               height: 100%;
+              max-height: unset;
             }
   
             &__top__img {
