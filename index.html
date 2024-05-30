@@ -10,12 +10,12 @@
 <body>
   <nav class="navbar">
     <h3 class="navbar__title">OXYGENShop</h3>
-    <button class="navbar__menu-button" type="button">
+    <button id="navbar-menu-button" class="navbar__menu-button" type="button">
       <figure class="menu-button__media">
         <img class="menu-button__media_img" src="./images/Menu.jpg" alt="menu-icon">
       </figure>
     </button>
-    <ul class="navbar__menu-sections">
+    <ul id="navbar-menu" class="navbar__menu-sections">
       <li class="navbar__menu-sections__item">why us <hr></li>
       <li class="navbar__menu-sections__item">benefits<hr></li>
       <li class="navbar__menu-sections__item">prices<hr></li>
@@ -63,7 +63,7 @@
       </article>
     </section>
     <section class="main__about">
-      <article class="main__about__article--laptop">
+      <article class="main__about__article laptop">
         <figure class="about__article__media__container--mobile">
           <img class="about__article__media__bottom__img" src="./images/Macbook2 2.png" alt=""/>
           <img class="about__article__media__top__img" src="./images/Rectangle 5.jpg" alt=""/>
@@ -78,7 +78,7 @@
           <hr class="article__container__content__hr">
         </div>
       </article>
-      <article class="main__about__article--mobile">
+      <article class="main__about__article mobile">
         <figure class="about__article__media__container--mobile">
           <img class="about__article__media__bottom__img" src="./images/Ellipse 4.png" alt=""/>
           <img class="about__article__media__top__img" src="./images/iPhone2 2.png" alt=""/>
@@ -93,7 +93,7 @@
           <hr class="article__container__content__hr">
         </div>
       </article>
-      <article class="main__about__article--trumpet">
+      <article class="main__about__article trumpet">
         <div class="about__article__container">
           <h4 class="article__container__content--primary">Increase recognition your brand!</h4>
           <p class="article__container__content--secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
@@ -111,7 +111,7 @@
     </section>
     <section class="main__pricing">
       <h3 class="main__pricing__title">Pricing</h3>
-      <article class="main__pricing__article--basic">
+      <article class="main__pricing__article basic">
         <div class="pricing__article__pack">
           <p class="pricing__article__pack__title">Basic</p>
           <p class="pricing__article__pack__value">$0</p>
@@ -126,7 +126,7 @@
         </ul>
         <button class="pricing__article__button">Begin</button>
       </article>
-      <article class="main__pricing__article--professional">
+      <article class="main__pricing__article professional">
         <div class="pricing__article__pack">
           <p class="pricing__article__pack__title">Professional</p>
           <p class="pricing__article__pack__value">$25</p>
@@ -141,7 +141,7 @@
         </ul>
         <button class="pricing__article__button">Begin</button>
       </article> 
-      <article class="main__pricing__article--premium">
+      <article class="main__pricing__article premium">
         <div class="pricing__article__pack">
           <p class="pricing__article__pack__title">Premium</p>
           <p class="pricing__article__pack__value">$60</p>
@@ -202,6 +202,9 @@
       </figure>
     </div>
   </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/navbar.js"></script>
 </body>
 
 </html>

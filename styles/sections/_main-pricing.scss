@@ -1,66 +1,94 @@
 
-@mixin pricing-article-card($color, $pack-width, $pack-left, $pack-top) {
-  position: relative;
-  width: 293px;
-  height: 251px;
-  border-radius: 18px;
+@mixin pricing-article-card-subscription($color, $pack-width, $pack-left, $pack-top) {
   border: 1px solid $color;
-  margin: 0 auto;
-  margin-bottom: 3.5em;
-  
+
   .pricing__article__pack {
-    display: inline-block; 
     width: $pack-width;
-    position: relative;
     left: $pack-left;
     top: $pack-top;
 
+    &__value {
+      color: $color;
+    }
+  }
+
+  .pricing__article__button {
+    background-color: $color;
+  }
+}
+
+.main__pricing {
+  text-align: center;
+
+  &__title {
+    font-family: Raleway;
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 42.26px;
+    text-align: center;
+    margin-top: 1.6em;
+    margin-bottom: 0.4em;
+
+  }
+
+  &__article {
+    position: relative;
+    width: 293px;
+    height: 251px;
+    border-radius: 18px;
+    margin: 0 auto;
+    margin-bottom: 3.5em;
+    transition: all .2s ease-in-out; 
+  
+    .pricing__article__pack {
+      display: inline-block; 
+      position: relative;
+
     &__title {
       font-family: Raleway;
-      font-size: 20px;
+      font-size: 1.3rem;
       font-weight: 700;
       line-height: 24px;
     }
 
     &__value {
-      font-family: Open Sans;
-      font-size: 46px;
+      font-family: 'Open Sans';
+      font-size: 2.9rem;
       font-weight: 300;
       line-height: 64px;
-      color: $color;
     }
 
     &__offer {
       font-family: Raleway;
-      font-size: 12px;
+      font-size: 0.8rem;
       font-weight: 700;
       line-height: 14.09px;
     }
   }
 
-  .pricing__article__features {
-    display: inline-block;
-    position: relative;
-    top: 2.4em;
-    left: 0em;    
-    list-style-type: none; 
-    padding: 0; 
-    margin: 0; 
-    text-align: left;
+    .pricing__article__features {
+      display: inline-block;
+      position: relative;
+      top: 2.4em;
+      left: 0em;    
+      list-style-type: none; 
+      padding: 0; 
+      margin: 0; 
+      text-align: left;
 
     &__item {
       padding-bottom: 1em;
-      font-family: Open Sans;
-      font-size: 14px;
+      font-family: 'Open Sans';
+      font-size: 0.9rem;
       font-weight: 400;
       line-height: 19.07px;
 
-      &__img {
-        margin-right: 0.8em;
+        &__img {
+          margin-right: 0.8em;
+        }
       }
-    }
 
-  }
+    }
 
   .pricing__article__button {
     position: absolute;
@@ -70,41 +98,27 @@
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 50%);
-    background-color: $color;
     color: white;
     border: none;
-    font-family: Open Sans;
-    font-size: 0.9em;
+    font-family: 'Open Sans';
+    font-size: 0.9rem;
     font-weight: 700;
+    cursor: pointer;
 
+    }
+
+    &.basic {
+      @include pricing-article-card-subscription($color-2, 45%, -0.4em, 0.3em);
+    }
+
+    &.professional {
+      @include pricing-article-card-subscription($color-1, 44%, -0.1em, 1.6em);
+    }
+
+    &.premium {
+      @include pricing-article-card-subscription($color-3, 45%, -0.2em, 1.8em); 
+    }
   }
 
-}
-
-.main__pricing {
-  text-align: center;
-
-  &__title {
-    font-family: Raleway;
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 42.26px;
-    text-align: center;
-    margin-top: 1.6em;
-    margin-bottom: 0.4em;
-
-  }
-
-  &__article--basic {
-    @include pricing-article-card($color-2, 45%, -0.4em, 0.3em);
-  }
-
-  &__article--professional {
-    @include pricing-article-card($color-1, 44%, -0.1em, 1.6em);
-  }
-
-  &__article--premium {
-    @include pricing-article-card($color-3, 45%, -0.2em, 1.8em);
-  }
 }
 

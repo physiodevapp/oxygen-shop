@@ -8,7 +8,7 @@
   
   &__title {
     font-family: Raleway;
-    font-size: 40px;
+    font-size: 2.7rem;
     font-weight: 400;
     line-height: 46.96px;
     margin-bottom: 0.1em;
@@ -17,8 +17,8 @@
   }
 
   &__subtitle {
-    font-family: Open Sans;
-    font-size: 16px;
+    font-family: 'Open Sans';
+    font-size: 1rem;
     font-weight: 400;
     line-height: 22px;
     margin-bottom: 2em;
@@ -29,8 +29,8 @@
     margin-bottom: 3.5em;
 
     .contact__info__mail, .contact__info__tel {
-      font-family: Open Sans;
-      font-size: 16px;
+      font-family: 'Open Sans';
+      font-size: 1rem;
       font-weight: 600;
       line-height: 22px;
       color: #A5A5A5; 
@@ -51,8 +51,8 @@
   &__form {
 
     .contact__form__label {
-      font-family: Open Sans;
-      font-size: 11px;
+      font-family: 'Open Sans';
+      font-size: 0.8rem;
       font-weight: 600;
       line-height: 14.98px;
       text-align: left;
@@ -83,12 +83,11 @@
     }
 
     .checkbox__label {
-      font-family: Open Sans;
-      font-size: 12px;
+      font-family: 'Open Sans';
+      font-size: 0.8rem;
       font-weight: 400;
       line-height: 16.34px;
-      text-align: left;
-      
+      text-align: left;      
       display: inline-block;
       letter-spacing: unset;
       text-transform: unset;
@@ -97,7 +96,6 @@
       margin-left: 0.6em;
     }
 
-    /* HTML5 Boilerplate accessible hidden styles */
     .checkbox__box__input {
       border: 0; 
       clip: rect(0 0 0 0); 
@@ -169,6 +167,7 @@
       left: 100%;
       transform: translateX(-100%);
       margin-top: 2.4em;
+      cursor: pointer;
 
     }
 
