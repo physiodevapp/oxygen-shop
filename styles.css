@@ -20,6 +20,7 @@
   background-color: rgb(8, 166, 228);
   box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.2901960784);
   transition: all 0.15s ease-in-out;
+  cursor: pointer;
 }
 .navbar__top-button i {
   color: white;
