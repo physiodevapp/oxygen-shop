@@ -14,14 +14,17 @@ function formEventToObject({ target }) {
   return dataObject;
 }
 
-function validateFormObject(dataObject) {
+function isValidFormObject(dataObject) {
+
+  let formValidated = true;
 
   for (const key in dataObject) {
-  
+
     switch (key) {
       case "name":
         if (dataObject[key].length < 3 || dataObject[key].length >= 100) {
           document.getElementById("name").classList.add("invalid-field");
+          formValidated = false;
         } else {
           document.getElementById("name").classList.remove("invalid-field");
         }
@@ -33,6 +36,7 @@ function validateFormObject(dataObject) {
 
         if (!regex.test(dataObject[key])) {
           document.getElementById("email").classList.add("invalid-field");
+          formValidated = false;
         } else {
           document.getElementById("email").classList.remove("invalid-field");
         }
@@ -42,6 +46,7 @@ function validateFormObject(dataObject) {
       case "consent":
         if (!dataObject[key]) {
           document.getElementById("consent-label").classList.add("invalid-field");
+          formValidated = false;
         } else {
           document.getElementById("consent-label").classList.remove("invalid-field");
         }
@@ -52,7 +57,22 @@ function validateFormObject(dataObject) {
         break;
     }
   }
+
+  return formValidated;
 }
+
+function sendFormDataObject(dataObject) {
+
+  fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: JSON.stringify(dataObject),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+  }
 
 
 document.getElementById("contact-form").onsubmit = handleForm;
@@ -62,5 +82,9 @@ function handleForm(event) {
 
   const dataObject = formEventToObject(event);
 
-  validateFormObject(dataObject);
+  const canSendData = isValidFormObject(dataObject);
+
+  if (canSendData) {
+    sendFormDataObject(dataObject);
+  }
 }
