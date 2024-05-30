@@ -516,6 +516,10 @@
   top: 0;
   left: 0;
 }
+.main__contact__form .contact__form__input.invalid-field, .main__contact__form .checkbox__box label.invalid-field {
+  border: 2px solid rgb(235, 71, 110);
+  border-radius: 0.3em;
+}
 .main__contact__form .contact__form__label {
   font-family: "Open Sans";
   font-size: 0.8rem;
@@ -534,6 +538,7 @@
   border: none;
   height: 28px;
   outline: 0px solid transparent;
+  padding: 0.6em;
   display: block;
   border-bottom: 1px solid #95989A;
 }
@@ -583,14 +588,14 @@
   display: inline-block;
   height: 100%;
   width: 100%;
+  border: 2px solid #95989A;
+  border-radius: 0.3em;
 }
 .main__contact__form .checkbox__box label:after {
   content: "";
   display: inline-block;
   height: 100%;
   width: 100%;
-  border: 2px solid #95989A;
-  border-radius: 0.3em;
   box-sizing: border-box;
 }
 .main__contact__form .checkbox__box svg {
