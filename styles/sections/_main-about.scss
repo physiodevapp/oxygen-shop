@@ -82,14 +82,20 @@
 
       @include about-article(0, 0, 100%, 0, 100%, 0, 0, 1, $color-3);
       
-      .about__article__media__top__img {
-        max-width: 550px;
-        top: 50%;
-        left: 50%;
-        transform-origin: center center;
-        transform: translate(-53%, -36%);
-      }
+      .about__article__media {
+        &__bottom__img {
+          max-height: 270px;
+        }
 
+        &__top__img {
+          max-width: 462px;
+          top: 50%;
+          left: 50%;
+          transform-origin: center center;
+          transform: translate(-53%, -36%);
+        }
+
+      }
       
     }
   
