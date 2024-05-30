@@ -40,6 +40,26 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+.navbar__menu-sections.mobile-view {
+  left: 0;
+  top: 70px;
+  background-color: white;
+  display: block;
+  height: unset;
+  padding: 0.4em 0em 1.2em;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2901960784);
+}
+.navbar__menu-sections.mobile-view li {
+  line-height: 35px;
+  text-align: left;
+  padding: 0 2.3em;
+}
+.navbar__menu-sections.mobile-view li:active {
+  color: black;
+}
+.navbar__menu-sections.mobile-view hr {
+  display: none;
+}
 .navbar__menu-sections__item {
   position: relative;
   align-self: center;
