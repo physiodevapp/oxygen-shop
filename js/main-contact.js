@@ -17,17 +17,20 @@ function formEventToObject({ target }) {
 function isValidFormObject(dataObject) {
 
   let formValidated = true;
+  const invalidHTMLFields = new Array( ...document.getElementsByClassName("invalid-field") );
+  
+  invalidHTMLFields.forEach((htmlElement) => {
+    htmlElement.classList.remove("invalid-field");
+  });
 
   for (const key in dataObject) {
 
     switch (key) {
       case "name":
         if (dataObject[key].length < 3 || dataObject[key].length >= 100) {
-          document.getElementById("name").classList.add("invalid-field");
+          document.getElementById("name").classList.toggle("invalid-field");
           formValidated = false;
-        } else {
-          document.getElementById("name").classList.remove("invalid-field");
-        }
+        } 
 
         break;
 
@@ -35,21 +38,17 @@ function isValidFormObject(dataObject) {
         const regex = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 
         if (!regex.test(dataObject[key])) {
-          document.getElementById("email").classList.add("invalid-field");
+          document.getElementById("email").classList.toggle("invalid-field");
           formValidated = false;
-        } else {
-          document.getElementById("email").classList.remove("invalid-field");
-        }
+        } 
 
         break;
 
       case "consent":
         if (!dataObject[key]) {
-          document.getElementById("consent-label").classList.add("invalid-field");
+          document.getElementById("consent-label").classList.toggle("invalid-field");
           formValidated = false;
-        } else {
-          document.getElementById("consent-label").classList.remove("invalid-field");
-        }
+        } 
 
         break;
 
@@ -73,6 +72,7 @@ function sendFormDataObject(dataObject) {
     .then((response) => response.json())
     .then((json) => console.log(json));
   }
+
 
 
 document.getElementById("contact-form").addEventListener("submit", (event) => {
