@@ -10,7 +10,7 @@ const isModalShown = () => {
   return value
 }
 
-const showModal = (basedOn, currentScrollValue = undefined, threshold = undefined) => {
+const showModal = (basedOn, currentScrollValue = null, threshold = null) => {
 
   modal.classList.remove("display-none");
 
