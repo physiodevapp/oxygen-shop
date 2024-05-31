@@ -1,7 +1,6 @@
 
 
-window.addEventListener("scroll", (event) => {
-  const scrollPercentage = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+window.addEventListener("scroll", () => {
   const navbarTopButton = document.getElementById("navbar-top-button");
 
   if (scrollPercentage > 25) {
