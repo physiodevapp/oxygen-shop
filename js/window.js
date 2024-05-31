@@ -2,7 +2,7 @@
 
 window.addEventListener("load", () => {
 
-  !isModalShown && showModal("time");
+  !isModalShown() && showModal("time");
 
 })
 
@@ -14,6 +14,6 @@ window.addEventListener("scroll", () => {
 
   showTopButton(currentScrollValue, 25);
 
-  !isModalShown && showModal("scroll");
+  !isModalShown() && showModal("scroll");
 
 })
