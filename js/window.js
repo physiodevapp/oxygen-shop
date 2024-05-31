@@ -1,9 +1,7 @@
 
 
 window.addEventListener("load", () => {
-
   isModalShown() ? hideModal() : showModal("time");
-
 });
 
 window.addEventListener("keydown", ({key}) => {
@@ -18,6 +16,6 @@ window.addEventListener("scroll", () => {
 
   showTopButton(currentScrollValue, 25);
 
-  isModalShown() ? hideModal() : showModal("scroll");
+  !isModalShown() && showModal("scroll", currentScrollValue, 25);
 
 })
