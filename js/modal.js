@@ -1,18 +1,25 @@
 const modal = document.getElementById("modal");
 const closeButton = document.getElementById("modal-close-button");
+const subscriptionForm = document.getElementById("subscription-form");
+let modalTimeout;
+
 const isModalShown = () => {
-  return !!localStorage.getItem("isModalShown") || false;
+  const value = (!!localStorage.getItem("isModalShown") && !modal.classList.contains("show-modal")) 
+    || false;
+  
+  return value
 }
 
-const showModal = (basedOn) => {
-  const currentScrollValue = scrollPercentage();
-  let modalTimeout;
+const showModal = (basedOn, currentScrollValue = undefined, threshold = undefined) => {
+
+  modal.classList.remove("display-none");
 
   switch (basedOn) {
     case "time":
       modalTimeout = setTimeout(() => {
         clearTimeout(modalTimeout);
 
+        console.log('object');
         localStorage.setItem("isModalShown", "true");
 
         modal.classList.add("show-modal");
@@ -22,7 +29,8 @@ const showModal = (basedOn) => {
       break;
 
     case "scroll":
-      if (currentScrollValue > 25) {
+      if (currentScrollValue > threshold) {
+
         modal.classList.add("show-modal");
 
         clearTimeout(modalTimeout);
@@ -48,6 +56,24 @@ const hideModal = () => {
   }, 200);
 };
 
-modal.addEventListener("click", hideModal);
+modal.addEventListener("click", ({target}) => {
+  target.id === "modal" && hideModal();
+});
 
-closeButton.addEventListener("click", hideModal);
+closeButton.addEventListener("click", () => {
+  hideModal();
+});
+
+subscriptionForm.addEventListener("submit", (event) => {
+
+  event.preventDefault();
+  
+  const dataObject = formEventToObject(event);
+  
+  const canSendData = isValidFormObject(dataObject);
+  
+  if (canSendData) {
+    sendFormDataObject(dataObject);
+  }
+
+});
