@@ -1,25 +1,26 @@
 
 
-window.addEventListener("scroll", (event) => {
-  const scrollPercentage = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
-  const navbarTopButton = document.getElementById("navbar-top-button");
+const navbarTopButton = document.getElementById("navbar-top-button");
+const navbarScrollIndicator = document.getElementById("navbar-scroll-indicator");
+const navbarMenu = document.getElementById("navbar-menu");
 
-  if (scrollPercentage > 25) {
+const showScrollbarStatus = () => {
+  const currentScrollValue =  scrollPercentage();
+  
+  if (currentScrollValue > 25) {
     navbarTopButton.classList.add("show-top-button");
   } else {
     navbarTopButton.classList.remove("show-top-button");
   }
 
-  document.getElementById("navbar-scroll-indicator").style.width = `${scrollPercentage}%`;
+  navbarScrollIndicator.style.width = `${currentScrollValue}%`;
+}
 
-})
-
-document.getElementById("navbar-menu-button")
-  .addEventListener("click", () => {
-    document.getElementById("navbar-menu").classList.toggle("show-mobile-menu");
+navbarTopButton.addEventListener("click", () => {
+    navbarMenu.classList.toggle("show-mobile-menu");
   })
 
-document.getElementById("navbar-top-button").addEventListener("click", () => {
+navbarTopButton.addEventListener("click", () => {
   const topButtonTimeout = setTimeout(() => {
 
     clearTimeout(topButtonTimeout);
