@@ -1,19 +1,23 @@
 const modal = document.getElementById("modal");
 const closeButton = document.getElementById("modal-close-button");
-let isModalShown = false;
+const isModalShown = () => {
+  return !!localStorage.getItem("isModalShown") || false;
+}
 
 const showModal = (basedOn) => {
   const currentScrollValue = scrollPercentage();
+  let modalTimeout;
 
   switch (basedOn) {
     case "time":
-      const modalTimeout = setTimeout(() => {
+      modalTimeout = setTimeout(() => {
         clearTimeout(modalTimeout);
+
+        localStorage.setItem("isModalShown", "true");
 
         modal.classList.add("show-modal");
       }, 5000);
 
-      isModalShown = true;
 
       break;
 
@@ -21,7 +25,10 @@ const showModal = (basedOn) => {
       if (currentScrollValue > 25) {
         modal.classList.add("show-modal");
 
-        isModalShown = true;
+        clearTimeout(modalTimeout);
+
+        localStorage.setItem("isModalShown", "true");
+
       }
 
       break;
