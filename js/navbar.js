@@ -4,16 +4,16 @@ const navbarTopButton = document.getElementById("navbar-top-button");
 const navbarScrollIndicator = document.getElementById("navbar-scroll-indicator");
 const navbarMenu = document.getElementById("navbar-menu");
 
-const showScrollbarStatus = () => {
-  const currentScrollValue =  scrollPercentage();
-  
-  if (currentScrollValue > 25) {
+const showScrollbarStatus = (currentScrollValue) => {
+  navbarScrollIndicator.style.width = `${currentScrollValue}%`;
+}
+
+const showTopButton = (currentScrollValue, threshold) => {
+  if (currentScrollValue > threshold) {
     navbarTopButton.classList.add("show-top-button");
   } else {
     navbarTopButton.classList.remove("show-top-button");
   }
-
-  navbarScrollIndicator.style.width = `${currentScrollValue}%`;
 }
 
 navbarTopButton.addEventListener("click", () => {
