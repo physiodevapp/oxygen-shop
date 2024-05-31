@@ -2,14 +2,15 @@
 
 window.addEventListener("scroll", () => {
   const navbarTopButton = document.getElementById("navbar-top-button");
-
-  if (scrollPercentage > 25) {
+  const currentScrollValue =  scrollPercentage();
+  
+  if (currentScrollValue > 25) {
     navbarTopButton.classList.add("show-top-button");
   } else {
     navbarTopButton.classList.remove("show-top-button");
   }
 
-  document.getElementById("navbar-scroll-indicator").style.width = `${scrollPercentage}%`;
+  document.getElementById("navbar-scroll-indicator").style.width = `${currentScrollValue}%`;
 
 })
 
