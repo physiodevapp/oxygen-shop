@@ -2,6 +2,7 @@
 
 const navbarTopButton = document.getElementById("navbar-top-button");
 const navbarScrollIndicator = document.getElementById("navbar-scroll-indicator");
+const navbarMenuButton = document.getElementById("navbar-menu-button");
 const navbarMenu = document.getElementById("navbar-menu");
 
 const showScrollbarStatus = (currentScrollValue) => {
@@ -16,7 +17,7 @@ const showTopButton = (currentScrollValue, threshold) => {
   }
 }
 
-navbarTopButton.addEventListener("click", () => {
+navbarMenuButton.addEventListener("click", () => {
     navbarMenu.classList.toggle("show-mobile-menu");
   })
 

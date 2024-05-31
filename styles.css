@@ -13,6 +13,20 @@
 .modal.show-modal {
   opacity: 1;
 }
+.modal.display-none {
+  display: none;
+}
+.modal__close-button {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  border: none;
+  cursor: pointer;
+}
+.modal__close-button i {
+  font-size: 2em;
+  color: rgba(165, 165, 165, 0.4901960784);
+}
 .modal__article {
   position: relative;
   top: 45%;
@@ -34,7 +48,9 @@
   margin-top: 1.6em;
 }
 .modal__article__subtitle {
+  font-size: 1.2em;
   margin-top: 1em;
+  padding: 0 0.4em;
 }
 .modal__article__form {
   margin-top: 1.6em;
