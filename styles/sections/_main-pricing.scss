@@ -17,6 +17,7 @@
   }
 }
 
+
 .main__pricing {
   text-align: center;
 
@@ -28,6 +29,103 @@
     text-align: center;
     margin-top: 1.6em;
     margin-bottom: 0.4em;
+
+  }
+
+  &__currency {
+    width: 100%;
+    margin-bottom: 2em;
+
+    .currency__title, .currency__selector {
+      display: inline-block;
+    }
+
+    .currency__title {
+      font-family: Raleway;
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-bottom: 1em;
+      margin-right: 1em;
+    }
+
+    .currency__selector {
+
+      .selector-expanded {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      &__button {
+        padding: 0.6em 1em 0.6em 1.2em;
+        border-radius: 0.4em;
+        border: 1px solid #a5a5a5;
+        font-family: Raleway;
+        font-size: 1rem;
+        font-weight: 600;
+        position: relative;
+        padding-left: 4em;
+        background-color: white;
+        z-index: 1;
+        cursor: pointer;
+
+        img {
+          position: absolute;
+          height: 100%;
+          top: 0em;
+          left: 0.8em;
+        }
+
+      }
+      
+
+      &__list {
+        border: 1px solid #aa9e9e;
+        border-top-width: 0px;
+        vertical-align: middle;
+        padding: 0.3em 0.75em 0.3em 0.6em;
+        position: absolute;
+        margin-top: 0;
+        border-radius: 0em 0em 0.4em 0.4em;
+        background: white;
+        z-index: 1;
+        box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.2901960784);
+        display: none;
+
+        &.show-currencies {
+          display: block;
+        }
+
+        &__item:hover, &__item:active {
+          color: black;
+        }
+
+        &__item {
+          // border: 1px solid green;
+          color: #a59f9f;
+          line-height: 40px;
+          vertical-align: middle;
+          height: 40px;
+          position: relative;
+          padding-left: 3.2em;
+          padding-right: 0.4em;
+          list-style-type: none;
+          margin: 0.4em 0;
+          font-family: Raleway;
+          font-size: 1rem;
+          font-weight: 600;
+          cursor: pointer;
+
+          img {
+            height: 100%;
+            position: absolute;
+            top: 0em;
+            left: 0.2em;
+          }
+
+        }
+
+      }
+    }
 
   }
 

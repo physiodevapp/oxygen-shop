@@ -126,6 +126,7 @@
   transform: translateY(-50%);
   top: 50%;
   background-color: white;
+  width: 100%;
 }
 .navbar__menu-button {
   display: inline-block;
@@ -451,6 +452,83 @@
   text-align: center;
   margin-top: 1.6em;
   margin-bottom: 0.4em;
+}
+.main__pricing__currency {
+  width: 100%;
+  margin-bottom: 2em;
+}
+.main__pricing__currency .currency__title, .main__pricing__currency .currency__selector {
+  display: inline-block;
+}
+.main__pricing__currency .currency__title {
+  font-family: Raleway;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+.main__pricing__currency .currency__selector .selector-expanded {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.main__pricing__currency .currency__selector__button {
+  padding: 0.6em 1em 0.6em 1.2em;
+  border-radius: 0.4em;
+  border: 1px solid #a5a5a5;
+  font-family: Raleway;
+  font-size: 1rem;
+  font-weight: 600;
+  position: relative;
+  padding-left: 4em;
+  background-color: white;
+  z-index: 1;
+  cursor: pointer;
+}
+.main__pricing__currency .currency__selector__button img {
+  position: absolute;
+  height: 100%;
+  top: 0em;
+  left: 0.8em;
+}
+.main__pricing__currency .currency__selector__list {
+  border: 1px solid #aa9e9e;
+  border-top-width: 0px;
+  vertical-align: middle;
+  padding: 0.3em 0.75em 0.3em 0.6em;
+  position: absolute;
+  margin-top: 0;
+  border-radius: 0em 0em 0.4em 0.4em;
+  background: white;
+  z-index: 1;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.2901960784);
+  display: none;
+}
+.main__pricing__currency .currency__selector__list.show-currencies {
+  display: block;
+}
+.main__pricing__currency .currency__selector__list__item:hover, .main__pricing__currency .currency__selector__list__item:active {
+  color: black;
+}
+.main__pricing__currency .currency__selector__list__item {
+  color: #a59f9f;
+  line-height: 40px;
+  vertical-align: middle;
+  height: 40px;
+  position: relative;
+  padding-left: 3.2em;
+  padding-right: 0.4em;
+  list-style-type: none;
+  margin: 0.4em 0;
+  font-family: Raleway;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.main__pricing__currency .currency__selector__list__item img {
+  height: 100%;
+  position: absolute;
+  top: 0em;
+  left: 0.2em;
 }
 .main__pricing__article {
   position: relative;
@@ -959,7 +1037,6 @@ body {
   }
   .main__pricing__title {
     width: 100%;
-    margin-bottom: 1.5em;
     margin-top: 3em;
   }
   .main__pricing__article {
@@ -972,15 +1049,18 @@ body {
     margin: 0 2em 3.5em;
     padding-top: 2em;
   }
-  .main__pricing .pricing__article__pack {
+  .main__pricing__article .pricing__article__pack {
     top: 0em;
   }
-  .main__pricing .pricing__article__features {
+  .main__pricing__article .pricing__article__features {
     top: 0em;
     margin-bottom: 3em;
   }
-  .main__pricing .pricing__article__features__item {
+  .main__pricing__article .pricing__article__features__item {
     padding-bottom: 1.8em;
+  }
+  .main__pricing__article.basic .pricing__article__pack {
+    top: 1.8em;
   }
   .main__pricing__article:hover {
     transform: scale(1.08);

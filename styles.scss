@@ -288,7 +288,7 @@ body {
 
     &__title { 
       width: 100%;
-      margin-bottom: 1.5em;
+      // margin-bottom: 1.5em;
       margin-top: 3em;
       
     }
@@ -302,23 +302,30 @@ body {
       width: 372px;
       margin: 0 2em 3.5em;
       padding-top: 2em;
+
+      .pricing__article {
       
-    }
+        &__pack {
+          top: 0em;
+        }
+  
+        &__features {
+          top: 0em;
+          margin-bottom: 3em;
+        }
+  
+        &__features__item {
+          padding-bottom: 1.8em;
+        }
+  
+      }
 
-    .pricing__article {
+      &.basic {
+        .pricing__article__pack {
+          top: 1.8em;
+        }
+      }
       
-      &__pack {
-        top: 0em;
-      }
-
-      &__features {
-        top: 0em;
-        margin-bottom: 3em;
-      }
-
-      &__features__item {
-        padding-bottom: 1.8em;
-      }
     }
 
     &__article:hover {

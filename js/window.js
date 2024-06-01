@@ -19,3 +19,10 @@ window.addEventListener("scroll", () => {
   !isModalShown() && showModal("scroll", currentScrollValue, 25);
 
 })
+
+window.addEventListener("click", ({target}) => {
+
+  if ( [selectorButton.id, selectorUnits.id, selectorFlag.id].every((id) => id !== target.id) ) 
+    toggleCurrencyOptions("remove");
+  
+})
