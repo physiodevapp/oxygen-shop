@@ -19,7 +19,6 @@ const showModal = (basedOn, currentScrollValue = null, threshold = null) => {
       modalTimeout = setTimeout(() => {
         clearTimeout(modalTimeout);
 
-        console.log('object');
         localStorage.setItem("isModalShown", "true");
 
         modal.classList.add("show-modal");

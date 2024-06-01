@@ -147,10 +147,21 @@
     </section>
     <section id="prices" class="main__pricing">
       <h3 class="main__pricing__title">Pricing</h3>
+      <article class="main__pricing__currency">
+        <p class="currency__title">Choose your currency</p>
+        <div class="currency__selector">
+          <button id="currency-selector-button" class="currency__selector__button"><img id="selector-button-img" src="./images/estados-unidos.png" alt="currency-flag"><span id="selector-button-units">USD</span></button>
+          <ul id="currency-selector-list" class="currency__selector__list">
+            <li class="currency__selector__list__item" data-ref="EUR"><img src="./images/union-europea.png" alt="">EUR</li>
+            <li class="currency__selector__list__item" data-ref="GBP"><img src="./images/reino-unido.png" alt="">GBP</li>
+            <li class="currency__selector__list__item" data-ref="USD"><img src="./images/estados-unidos.png" alt="">USD</li>
+          </ul>
+        </div>
+      </article>
       <article class="main__pricing__article basic">
         <div class="pricing__article__pack">
           <p class="pricing__article__pack__title">Basic</p>
-          <p class="pricing__article__pack__value">$0</p>
+          <p class="pricing__article__pack__value" data-value="0">$0</p>
           <p class="pricing__article__pack__offer"></p>
         </div>
         <ul class="pricing__article__features">
@@ -170,7 +181,7 @@
       <article class="main__pricing__article professional">
         <div class="pricing__article__pack">
           <p class="pricing__article__pack__title">Professional</p>
-          <p class="pricing__article__pack__value">$25</p>
+          <p class="pricing__article__pack__value" data-value="25">$25</p>
           <p class="pricing__article__pack__offer">Limited offer</p>
         </div>
         <ul class="pricing__article__features">
@@ -190,7 +201,7 @@
       <article class="main__pricing__article premium">
         <div class="pricing__article__pack">
           <p class="pricing__article__pack__title">Premium</p>
-          <p class="pricing__article__pack__value">$60</p>
+          <p class="pricing__article__pack__value" data-value="60">$60</p>
           <p class="pricing__article__pack__offer">Limited offer</p>
         </div>
         <ul class="pricing__article__features">
@@ -267,6 +278,7 @@
   <script src="js/navbar.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/main-contact.js"></script>
+  <script src="js/main-pricing.js"></script>
   <script src="js/window.js"></script>
 
 </body>
