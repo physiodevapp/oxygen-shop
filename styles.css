@@ -86,7 +86,7 @@
   z-index: 10;
 }
 @media only screen and (min-width: 1000px) {
-  .navbar .navbar {
+  .navbar {
     box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.2901960784);
   }
   .navbar .navbar__title {
