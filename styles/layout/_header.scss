@@ -1,6 +1,32 @@
 
 
 .header {
+
+  @media only screen and (min-width: 1000px) {
+
+    .header {
+      padding-top: 6.2em;
+      
+      &__title {
+        font-size: 3rem;
+      }
+  
+      &__button {
+        width: 27.5em;
+        margin: 0;
+      }
+  
+      &__media {
+        height: 41vw;
+        max-height: 594px;
+        background-size: cover;
+        background-image: url("./images/Background 2.png");
+      }
+      
+    }
+
+  }
+
   position: relative;
   top: 70px;
   text-align: center;

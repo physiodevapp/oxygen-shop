@@ -1,5 +1,20 @@
 
 .footer {
+
+  @media only screen and (min-width: 1000px) {
+
+    .footer {
+      &__text {
+        margin-left: 8.5em;
+      }
+  
+      &__social-media {
+        margin-right: 10em;
+      }
+    }
+
+  }
+
   position: relative;
   top: 70px;
   display: block;
