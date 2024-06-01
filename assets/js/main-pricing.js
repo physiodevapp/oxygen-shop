@@ -110,7 +110,7 @@ const updateSelectorValue = (currencyCode) => {
   }
 
   selectorUnits.innerText = currencyCode.toUpperCase();
-  selectorFlag.src = `./images/${flag}`;
+  selectorFlag.src = `./assets/images/${flag}`;
 
 }
  
