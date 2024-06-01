@@ -74,14 +74,14 @@
 
         &.invalid-field {
           border: 2px solid $color-2;
-          border-radius: 0.3em;
+          border-radius: 0.3em 0em 0em 0.3em;
         }
         
       }
 
       .form__submit {
         position: relative;
-        left: -0.35em;
+        left: -0.45em;
         border: none;
         border-radius: 0em 0.4em 0.4em 0em;
         background-color: $color-1;
