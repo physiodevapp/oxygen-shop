@@ -17,8 +17,90 @@
   }
 }
 
+@mixin pricing-article-hover($color) {
+  box-shadow: 5px 10px 27px 0px rgba($color, 0.3);
+
+  .pricing__article__button {
+    box-shadow: 5px 10px 14px 0px rgba($color, 0.3);
+
+  }
+
+}
+
 
 .main__pricing {
+
+  @media only screen and (min-width: 1000px) {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    .main__pricing {
+
+      &__title { 
+        width: 100%;
+        margin-top: 3em;
+        
+      }
+  
+      &__article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 485px;
+        width: 372px;
+        margin: 0 2em 3.5em;
+        padding-top: 2em;
+  
+        .pricing__article {
+        
+          &__pack {
+            top: 0em;
+          }
+    
+          &__features {
+            top: 0em;
+            margin-bottom: 3em;
+          }
+    
+          &__features__item {
+            padding-bottom: 1.8em;
+          }
+    
+        }
+  
+        &.basic {
+          .pricing__article__pack {
+            top: 1.8em;
+          }
+        }
+        
+      }
+  
+      &__article:hover {
+        transform: scale(1.08); 
+        
+        &.basic {
+          @include pricing-article-hover($color-2);
+        }
+  
+        &.professional:hover {
+          @include pricing-article-hover($color-1);
+        }
+  
+        &.premium:hover {
+          @include pricing-article-hover($color-3);
+        }
+  
+      }
+  
+   }
+
+  }
+
   text-align: center;
 
   &__title {

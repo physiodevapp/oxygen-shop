@@ -1,6 +1,62 @@
 
 
 .main__contact {
+
+  @media only screen and (min-width: 1000px) {
+
+    height: 376px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 896px;
+    margin: 6em auto 5em;
+    justify-content: flex-start;
+    
+    .main__contact {
+  
+      &__title {
+        width: 50%;
+        margin-top: 0;
+        font-size: 3rem;
+      }
+  
+      &__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+  
+        .contact__info__mail {
+          display: inline-block;
+        }
+        
+        .contact__info__tel {
+          display: inline-block;
+          margin-left: 1em;
+        }
+  
+      }
+  
+      &__form {
+        width: 50%;
+  
+        .contact__form__label[for="name"] {
+          margin-top: 0;
+        }
+  
+        .contact__form__checkbox {
+          margin-top: 2em;
+        }
+  
+        .checkbox__label {
+          width: 90.5%;
+        }
+  
+      }
+  
+    }
+
+  }
+
   text-align: left;
   margin-right: 1.5em;
   margin-left: 1.5em;
