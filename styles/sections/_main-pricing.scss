@@ -132,13 +132,15 @@
 
     .currency__selector {
 
+      position: relative;
+
       .selector-expanded {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
       }
 
       &__button {
-        padding: 0.6em 0.95em 0.6em 1.2em;
+        padding: 0.6em 1em 0.6em 1.2em;
         border-radius: 0.4em;
         border: 1px solid #a5a5a5;
         font-family: Raleway;
@@ -161,6 +163,7 @@
       
 
       &__list {
+        width: 100%;
         border: 1px solid #aa9e9e;
         border-top-width: 0px;
         vertical-align: middle;

@@ -3,8 +3,12 @@ const closeButton = document.getElementById("modal-close-button");
 const subscriptionForm = document.getElementById("subscription-form");
 let modalTimeout;
 
-const isModalShown = () => {
-  const value = (!!localStorage.getItem("isModalShown") && !modal.classList.contains("show-modal")) 
+const isModalShowing = () => {
+  return modal.classList.contains("show-modal");
+}
+
+const wasModalShown = () => {
+  const value = (!!localStorage.getItem("wasModalShown") && !isModalShowing()) 
     || false;
   
   return value
@@ -19,7 +23,7 @@ const showModal = (basedOn, currentScrollValue = null, threshold = null) => {
       modalTimeout = setTimeout(() => {
         clearTimeout(modalTimeout);
 
-        localStorage.setItem("isModalShown", "true");
+        localStorage.setItem("wasModalShown", "true");
 
         modal.classList.add("show-modal");
       }, 5000);
@@ -34,7 +38,7 @@ const showModal = (basedOn, currentScrollValue = null, threshold = null) => {
 
         clearTimeout(modalTimeout);
 
-        localStorage.setItem("isModalShown", "true");
+        localStorage.setItem("wasModalShown", "true");
 
       }
 

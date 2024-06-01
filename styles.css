@@ -65,11 +65,11 @@
 }
 .modal__article__form .form__input.invalid-field {
   border: 2px solid rgb(235, 71, 110);
-  border-radius: 0.3em;
+  border-radius: 0.3em 0em 0em 0.3em;
 }
 .modal__article__form .form__submit {
   position: relative;
-  left: -0.35em;
+  left: -0.45em;
   border: none;
   border-radius: 0em 0.4em 0.4em 0em;
   background-color: rgb(8, 166, 228);
@@ -710,12 +710,15 @@
   margin-bottom: 1em;
   margin-right: 1em;
 }
+.main__pricing__currency .currency__selector {
+  position: relative;
+}
 .main__pricing__currency .currency__selector .selector-expanded {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 .main__pricing__currency .currency__selector__button {
-  padding: 0.6em 0.95em 0.6em 1.2em;
+  padding: 0.6em 1em 0.6em 1.2em;
   border-radius: 0.4em;
   border: 1px solid #a5a5a5;
   font-family: Raleway;
@@ -734,6 +737,7 @@
   left: 0.8em;
 }
 .main__pricing__currency .currency__selector__list {
+  width: 100%;
   border: 1px solid #aa9e9e;
   border-top-width: 0px;
   vertical-align: middle;
