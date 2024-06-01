@@ -472,7 +472,7 @@
   border-bottom-right-radius: 0;
 }
 .main__pricing__currency .currency__selector__button {
-  padding: 0.6em 1em 0.6em 1.2em;
+  padding: 0.6em 0.95em 0.6em 1.2em;
   border-radius: 0.4em;
   border: 1px solid #a5a5a5;
   font-family: Raleway;
