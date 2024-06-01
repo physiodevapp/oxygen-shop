@@ -248,7 +248,7 @@
     height: 41vw;
     max-height: 594px;
     background-size: cover;
-    background-image: url("./images/Background 2.png");
+    background-image: url("../images/Background 2.png");
   }
 }
 .header__title {
@@ -290,7 +290,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("./images/Background 1.jpg");
+  background-image: url("../images/Background 1.jpg");
 }
 
 @media only screen and (min-width: 1000px) {
