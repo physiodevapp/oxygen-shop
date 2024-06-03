@@ -4,10 +4,6 @@ const selectorFlag = document.getElementById("selector-button-img");
 const currencyOptions = document.getElementById("currency-selector-list");
 let isCurrencyOptionsVisible = false;
 
-/**
- * 
- * @param {string} action 
- */
 const toggleCurrencyOptions = (action) => {
   if (action !== "add" && action !== "remove") return;
 
@@ -17,11 +13,6 @@ const toggleCurrencyOptions = (action) => {
   isCurrencyOptionsVisible = action === "add" ? true : false;
 };
 
-/**
- * 
- * @param {string} target 
- * @returns {string} currencyCode
- */
 const getCurrencyCode = (target) => {
   let currencyCode;
 
@@ -34,22 +25,12 @@ const getCurrencyCode = (target) => {
   return currencyCode;
 };
 
-/**
- * 
- * @param {string} className 
- * @returns priceElements
- */
 const getPriceElements = (className) => {
   return new Array(
     ...document.getElementsByClassName(className)
   );
 }
 
-/**
- * 
- * @param {number} currencyExchange 
- * @returns exchangedPrices
- */
 const getExchangedValues = (currencyExchange) => {
   const priceElements = getPriceElements("pricing__article__pack__value");
 
@@ -61,11 +42,6 @@ const getExchangedValues = (currencyExchange) => {
   });
 };
 
-/**
- * 
- * @param {string} currencyCode 
- * @returns {string} units
- */
 const getExchangedUnits = (currencyCode) => {
   let units = null;
 
@@ -90,11 +66,6 @@ const getExchangedUnits = (currencyCode) => {
   return units;
 }
 
-/**
- * 
- * @param {string} currencyCode 
- * @param {number} currencyExchange 
- */
 const exchangePrices = (currencyCode, currencyExchange) => {
   const priceElements = getPriceElements("pricing__article__pack__value");
 
@@ -117,10 +88,6 @@ const exchangePrices = (currencyCode, currencyExchange) => {
 
 }
 
-/**
- * 
- * @param {string} currencyCode 
- */
 const updateSelectorValue = (currencyCode) => {
 
   let flag = '';
