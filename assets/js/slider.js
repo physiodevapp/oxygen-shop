@@ -27,8 +27,9 @@ class Slider {
     if (!this._canAutoSlide)
       return;
 
-    if (autoSlideBehavior !== "auto" || !this.canSlide("right"))
+    if (autoSlideBehavior !== "auto" || !this.canSlide("right")) 
       clearInterval(this._autoSlideIntervalId);
+
     
 
     if (autoSlideBehavior !== "stop" && this.canSlide("right"))
@@ -174,7 +175,7 @@ class Slider {
      
       item.addEventListener("click", () => {
         this.slideToIndex(index);
-        
+        this.autoSlide("reset");
         this.setStyleNavbarItem(index);
         
       });
