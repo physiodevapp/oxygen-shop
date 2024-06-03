@@ -102,7 +102,7 @@ class Slider {
   setSlideStyle(transitionMode = null) {
     this._slides.forEach((slide, slideIndex) => {
       slide.style = `
-        left: ${50 + ((slideIndex - this._visibleSlideIndex) * 100)}%;
+        left: calc(${50 + ((slideIndex - this._visibleSlideIndex) * 100)}%  ${slideIndex < this._visibleSlideIndex ? "-" : "+"} ${slideIndex === this._visibleSlideIndex ? "0" : "2"}em);
         ${!transitionMode && "transition: all 0.4s ease-in-out;"}
       `
     });
