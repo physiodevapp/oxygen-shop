@@ -2,13 +2,10 @@
 
 class Slider {
 
-  /**
-   * 
-   * @param {string} sliderId 
-   */
   constructor(sliderId) {
     this._slider = document.getElementById(sliderId);
     this._slides = document.querySelectorAll(`#${sliderId} .slider__img`);
+    this._navbar = null;
     this._visibleSlideIndex = 0;
     this._totalSlides = this._slides.length; 
     this._autoSlideIntervalId = null;
@@ -21,20 +18,16 @@ class Slider {
     this.autoSlide("auto");
   }
 
-  /**
-   * 
-   * @param {string} mode 
-   */
-  autoSlide(mode = "auto") {
+  autoSlide(autoSlideBehavior = "auto") {
 
     if (!this._canAutoSlide)
       return;
 
-    if (mode !== "auto" || !this.canSlide("right"))
+    if (autoSlideBehavior !== "auto" || !this.canSlide("right"))
       clearInterval(this._autoSlideIntervalId);
     
 
-    if (mode !== "stop" && this.canSlide("right"))
+    if (autoSlideBehavior !== "stop" && this.canSlide("right"))
       this._autoSlideIntervalId = setInterval(() => {
         if (!this.canSlide("right")) {
           clearInterval(this._autoSlideIntervalId);
@@ -42,31 +35,24 @@ class Slider {
           this.slideToSide("right");
         }
 
-
       }, 4000);
 
   }
 
-  /**
-   * 
-   * @param {string} direction 
-   */
   slideToSide(direction) {
     if (this.canSlide(direction)) {
       this.setVisibleSlideIndex(direction);
+      this.setStyleNavbarItem(this._visibleSlideIndex);
       this.setSlideStyle();  
     }
 
     this.autoSlide("reset");
   }
 
-  /**
-   * 
-   * @returns
-   */
-  canSlide(mode, index = null) {
+  canSlide(slideBehavior, slideIndex = null) {
     let canSlide = false;
-    switch (mode) {
+
+    switch (slideBehavior) {
       case "right":
         canSlide = this._visibleSlideIndex < this._totalSlides - 1;
         break;
@@ -75,8 +61,8 @@ class Slider {
         canSlide = this._visibleSlideIndex > 0 ;
         break;
     
-      case "index":
-        canSlide = index >= 0 && index <= this._totalSlides - 1;
+      case "slideIndex":
+        canSlide = slideIndex >= 0 && slideIndex <= this._totalSlides - 1;
         break;
       
       default:
@@ -88,9 +74,8 @@ class Slider {
 
   }
 
-  
-  setVisibleSlideIndex(mode, index = null) {
-    switch (mode) {
+  setVisibleSlideIndex(indexBehavior, slideIndex = null) {
+    switch (indexBehavior) {
       case "right":
         this._visibleSlideIndex ++ ;
         break;
@@ -99,8 +84,8 @@ class Slider {
         this._visibleSlideIndex -- ;
         break;
     
-      case "index":
-        this._visibleSlideIndex = index;
+      case "slideIndex":
+        this._visibleSlideIndex = slideIndex;
         break;
 
       default:
@@ -110,24 +95,16 @@ class Slider {
 
   }
 
-  /**
-   * 
-   * @param {string} mode 
-   */
-  setSlideStyle(mode = null) {
+  setSlideStyle(transitionMode = null) {
     this._slides.forEach((slide, slideIndex) => {
       slide.style = `
         left: ${50 + ((slideIndex - this._visibleSlideIndex) * 100)}%;
-        ${!mode && "transition: all 0.4s ease-in-out;"}
+        ${!transitionMode && "transition: all 0.4s ease-in-out;"}
       `
     });
 
   }
 
-  /**
-   * 
-   * @param {string} direction 
-   */
   setLateralButton(direction) {
     const button = document.createElement("button");
     let buttonHTML = "";
@@ -161,34 +138,46 @@ class Slider {
 
   }
 
-  slideToIndex(index) {
+  slideToIndex(slideIndex) {
 
     this.setSlideStyle("index");
 
-    if (this.canSlide("index", index)) {
-      this.setVisibleSlideIndex("index", index);
-      this.setSlideStyle("index");
+    if (this.canSlide("slideIndex", slideIndex)) {
+      this.setVisibleSlideIndex("slideIndex", slideIndex);
+      this.setSlideStyle("slideIndex");
     }
+
+  }
+
+  setStyleNavbarItem(itemIndex) {
+
+    Array.from(this._navbar.children).forEach((child, index) => {
+      index === itemIndex ? child.classList.add("active") : child.classList.remove("active")
+    });
 
   }
 
   setNavbar() {
     const navbar = document.createElement("ul");
+    this._navbar = navbar;
 
-    navbar.classList.add("slider__navbar");
+    this._navbar.classList.add("slider__navbar");
 
     this._slides.forEach((slide, index) => {
       const item = document.createElement("li");
 
       item.classList.add("slider__navbar__item");
-
-      item.innerHTML = index + 1;
-      
+     
       item.addEventListener("click", () => {
         this.slideToIndex(index);
+        
+        this.setStyleNavbarItem(index);
+        
       });
-
+      
       navbar.appendChild(item);
+
+      index === 0 && this.setStyleNavbarItem(0);
 
     })
 
@@ -197,7 +186,6 @@ class Slider {
   }
 
 }
-
 
 
 const slider = new Slider("slider");

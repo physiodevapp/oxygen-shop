@@ -1099,12 +1099,22 @@
   margin-bottom: 1em;
   list-style-type: none;
   border-radius: 0.4em;
-  background-color: black;
+  background-color: transparent;
   color: white;
 }
 .slider__navbar__item {
-  padding: 0.4em 1em;
   cursor: pointer;
+  padding: 0.2em 0.2em;
+  border-radius: 50%;
+  background-color: white;
+  margin: 0 0.4em;
+  transition: all 0.2s ease-in-out;
+}
+.slider__navbar__item.active {
+  background-color: rgb(8, 166, 228);
+}
+.slider__navbar__item:hover {
+  transform: scale(1.6);
 }
 .slider__next, .slider__prev {
   position: absolute;
