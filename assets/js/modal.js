@@ -11,7 +11,7 @@ const wasModalShown = () => {
   const value = (!!localStorage.getItem("wasModalShown") && !isModalShowing()) 
     || false;
   
-  return value
+  return value;
 }
 
 const showModal = (basedOn, currentScrollValue = null, threshold = null) => {

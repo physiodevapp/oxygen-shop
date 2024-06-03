@@ -83,5 +83,15 @@ const sendFormDataObject = (dataObject) => {
     },
   })
     .then((response) => response.json())
-    .then((json) => console.log(json));
+    .catch((error) => {
+      alert(`An error occurred while trying to get the response to the API`)
+      console.error(error);
+    })
+    .then((json) => {
+      alert(json)
+    })
+    .catch((error) => {
+      alert(`An error occurred while trying to get the data`);
+      console.error(error);
+    });
   }
