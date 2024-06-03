@@ -77,6 +77,7 @@ subscriptionForm.addEventListener("submit", (event) => {
   
   if (canSendData) {
     sendFormDataObject(dataObject);
+    hideModal();
   }
 
 });
