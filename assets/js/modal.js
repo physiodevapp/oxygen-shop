@@ -11,9 +11,14 @@ const wasModalShown = () => {
   const value = (!!localStorage.getItem("wasModalShown") && !isModalShowing()) 
     || false;
   
-  return value
+  return value;
 }
 
+/**
+ * @param {string} basedOn
+ * @param {string} currentScrollValue
+ * @param {string} threshold
+ */
 const showModal = (basedOn, currentScrollValue = null, threshold = null) => {
 
   modal.classList.remove("display-none");
