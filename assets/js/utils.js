@@ -88,7 +88,7 @@ const sendFormDataObject = (dataObject) => {
       console.error(error);
     })
     .then((json) => {
-      alert(json)
+      alert(JSON.stringify(json))
     })
     .catch((error) => {
       alert(`An error occurred while trying to get the data`);
