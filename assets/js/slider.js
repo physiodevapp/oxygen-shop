@@ -15,7 +15,11 @@ class Slider {
     this.setLateralButton("right");
     this.setNavbar();
     this.setLateralButton("left");
-    this.autoSlide("auto");
+  }
+
+  set canAutoSlide(value) {
+    this._canAutoSlide = value;
+    value && this.autoSlide("auto");
   }
 
   autoSlide(autoSlideBehavior = "auto") {
@@ -189,4 +193,5 @@ class Slider {
 
 
 const slider = new Slider("slider");
+slider.canAutoSlide = false;
 
