@@ -1,8 +1,5 @@
 
 
-const scrollPercentage = () => window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
-
-
 const formEventToObject = ({ target }) => {
 
   const fields = new Array(...target.elements);
