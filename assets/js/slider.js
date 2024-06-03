@@ -193,5 +193,5 @@ class Slider {
 
 
 const slider = new Slider("slider");
-slider.canAutoSlide = false;
+slider.canAutoSlide = true;
 
