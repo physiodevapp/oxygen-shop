@@ -9,17 +9,16 @@ class Slider {
   constructor(sliderId) {
     this._slider = document.getElementById(sliderId);
     this._slides = document.querySelectorAll(`#${sliderId} .slider__img`);
-    // this._navbar = document.querySelectorAll(`#${sliderId} .slider__navbar`);
     this._visibleSlideIndex = 0;
     this._totalSlides = this._slides.length; 
     this._autoSlideIntervalId = null;
-    this._autoSlideMode = "auto";
+    this._canAutoSlide = false;
 
     this.setSlideStyle("initial");
     this.setLateralButton("right");
     this.setNavbar();
     this.setLateralButton("left");
-    this.autoSlide();
+    this.autoSlide("auto");
   }
 
   /**
@@ -27,20 +26,22 @@ class Slider {
    * @param {string} mode 
    */
   autoSlide(mode = "auto") {
-    this._autoSlideMode = mode;
 
-    if (this._autoSlideMode !== "auto" || !this.canSlide("right"))
+    if (!this._canAutoSlide)
+      return;
+
+    if (mode !== "auto" || !this.canSlide("right"))
       clearInterval(this._autoSlideIntervalId);
     
 
-    if (this._autoSlideMode !== "stop" && this.canSlide("right"))
+    if (mode !== "stop" && this.canSlide("right"))
       this._autoSlideIntervalId = setInterval(() => {
         if (!this.canSlide("right")) {
           clearInterval(this._autoSlideIntervalId);
-          return;
-        } 
+        } else {
+          this.slideToSide("right");
+        }
 
-        this.slideTo("right");
 
       }, 4000);
 
@@ -50,22 +51,22 @@ class Slider {
    * 
    * @param {string} direction 
    */
-  slideTo(direction) {
+  slideToSide(direction) {
     if (this.canSlide(direction)) {
       this.setVisibleSlideIndex(direction);
       this.setSlideStyle();  
     }
 
-    this._autoSlideMode !== "stop" && this.autoSlide("reset");
+    this.autoSlide("reset");
   }
 
   /**
    * 
    * @returns
    */
-  canSlide(direction) {
+  canSlide(mode, index = null) {
     let canSlide = false;
-    switch (direction) {
+    switch (mode) {
       case "right":
         canSlide = this._visibleSlideIndex < this._totalSlides - 1;
         break;
@@ -74,8 +75,13 @@ class Slider {
         canSlide = this._visibleSlideIndex > 0 ;
         break;
     
+      case "index":
+        canSlide = index >= 0 && index <= this._totalSlides - 1;
+        break;
+      
       default:
         break;
+
     }
 
     return canSlide;
@@ -83,8 +89,8 @@ class Slider {
   }
 
   
-  setVisibleSlideIndex(direction) {
-    switch (direction) {
+  setVisibleSlideIndex(mode, index = null) {
+    switch (mode) {
       case "right":
         this._visibleSlideIndex ++ ;
         break;
@@ -93,20 +99,26 @@ class Slider {
         this._visibleSlideIndex -- ;
         break;
     
+      case "index":
+        this._visibleSlideIndex = index;
+        break;
+
       default:
         break;
+
     }
+
   }
 
   /**
    * 
    * @param {string} mode 
    */
-  setSlideStyle(mode) {
-    this._slides.forEach((slide, index) => {
+  setSlideStyle(mode = null) {
+    this._slides.forEach((slide, slideIndex) => {
       slide.style = `
-        left: ${50 + ((index - this._visibleSlideIndex) * 100)}%;
-        ${mode !== "initial" && "transition: all 0.4s ease-in-out;"}
+        left: ${50 + ((slideIndex - this._visibleSlideIndex) * 100)}%;
+        ${!mode && "transition: all 0.4s ease-in-out;"}
       `
     });
 
@@ -142,10 +154,21 @@ class Slider {
     button.classList.add(`slider__${direction === "right" ? "next" : "prev"}`);  
     
     button.addEventListener("click", () => {
-        this.slideTo(direction);
+        this.slideToSide(direction);
     })
 
     this._slider.appendChild(button);
+
+  }
+
+  slideToIndex(index) {
+
+    this.setSlideStyle("index");
+
+    if (this.canSlide("index", index)) {
+      this.setVisibleSlideIndex("index", index);
+      this.setSlideStyle("index");
+    }
 
   }
 
@@ -156,9 +179,17 @@ class Slider {
 
     this._slides.forEach((slide, index) => {
       const item = document.createElement("li");
+
       item.classList.add("slider__navbar__item");
+
       item.innerHTML = index + 1;
+      
+      item.addEventListener("click", () => {
+        this.slideToIndex(index);
+      });
+
       navbar.appendChild(item);
+
     })
 
     this._slider.appendChild(navbar);
