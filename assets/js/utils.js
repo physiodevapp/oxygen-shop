@@ -1,15 +1,7 @@
 
-/**
- * 
- * @returns {number} percentage
- */
+
 const scrollPercentage = () => window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
 
-/**
- * 
- * @param {object} param0 
- * @returns {object} dataObject
- */
 const formEventToObject = ({ target }) => {
 
   const fields = new Array(...target.elements);
@@ -27,11 +19,6 @@ const formEventToObject = ({ target }) => {
   return dataObject;
 }
 
-/**
- * 
- * @param {object} dataObject 
- * @returns 
- */
 const isValidFormObject = (dataObject) => {
 
   let isFormValidated = true;
@@ -88,10 +75,6 @@ const isValidFormObject = (dataObject) => {
   return isFormValidated;
 }
 
-/**
- * 
- * @param {object} dataObject 
- */
 const sendFormDataObject = (dataObject) => {
 
   fetch('https://jsonplaceholder.typicode.com/posts', {
@@ -102,5 +85,15 @@ const sendFormDataObject = (dataObject) => {
     },
   })
     .then((response) => response.json())
-    .then((json) => console.log(json));
+    .catch((error) => {
+      alert(`An error occurred while trying to get the response to the API`)
+      console.error(error);
+    })
+    .then((json) => {
+      alert(json)
+    })
+    .catch((error) => {
+      alert(`An error occurred while trying to get the data`);
+      console.error(error);
+    });
   }
