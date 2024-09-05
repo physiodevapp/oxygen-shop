@@ -1,22 +1,10 @@
 
 .slider {
-
-  @media only screen and (min-width: 1000px) {
-    .slider__next, .slider__prev {
-      opacity: 0.2;
-    }
-
-    .slider__next:hover, .slider__prev:hover {
-      opacity: 1;
-    }
-
-  }
-
   height: 100%;
   width: 100%;
   position: relative;
   background-color: black;
-  overflow-x: hidden;
+  overflow: hidden;
   border-radius: 0.6em;
 
   &__navbar {
@@ -64,16 +52,41 @@
     opacity: 1;
   }
 
-  &__img {
+  &__container {
     position: absolute;        
     transform: translate(-50%, -50%);
     top: 50%;
-    height: auto;
-    max-height:100%;
-    max-width: calc(100% + 2em);
-    border: 1em solid black;
-    border-top-width: 0em;
-    border-bottom-width: 0em;
+    width: 100%;
+    height: 100%;
+
+    &__img {
+      position: absolute;        
+      transform: translate(-50%, -50%);
+      top: 50%;
+      height: auto;
+      max-width: calc(100% + 2em);
+      border: 0.5em solid black;
+      border-top-width: 0em;
+      border-bottom-width: 0em;
+      max-height:100%;
+    }
+  }
+
+
+  @media only screen and (min-width: 1000px) {
+    .slider__next, .slider__prev {
+      opacity: 0.2;
+    }
+
+    .slider__next:hover, .slider__prev:hover {
+      opacity: 1;
+    }
+
+    &__container__img {
+      height: unset;
+      max-height: unset;
+      width: calc(100% + 1em);
+    }
   }
 
 }

@@ -58,13 +58,25 @@
     right: 0;
     margin-right: 1.7em;
 
+    a {
+      text-decoration: none;
+    }
+
     &__media--left {
       display: inline-block;
       margin-right: 1em;
+
+      img {
+        width: 2em;
+      }
     }
 
     &__media {
       display: inline-block;
+
+      img {
+        width: 2.2em;
+      }
     }
 
   }

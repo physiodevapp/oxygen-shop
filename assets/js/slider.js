@@ -4,7 +4,7 @@ class Slider {
 
   constructor(sliderId) {
     this._slider = document.getElementById(sliderId);
-    this._slides = document.querySelectorAll(`#${sliderId} .slider__img`);
+    this._slides = document.querySelectorAll(`#${sliderId} .slider__container`);
     this._navbar = null;
     this._visibleSlideIndex = 0;
     this._totalSlides = this._slides.length; 
@@ -103,7 +103,7 @@ class Slider {
   setSlideStyle(transitionMode = null) {
     this._slides.forEach((slide, slideIndex) => {
       slide.style = `
-        left: calc(${50 + ((slideIndex - this._visibleSlideIndex) * 100)}%  ${slideIndex < this._visibleSlideIndex ? "-" : "+"} ${slideIndex === this._visibleSlideIndex ? "0" : "2"}em);
+        left: calc(${50 + ((slideIndex - this._visibleSlideIndex) * 100)}%  ${slideIndex < this._visibleSlideIndex ? "-" : "+"} ${slideIndex === this._visibleSlideIndex ? "0" : "1"}em);
         ${!transitionMode && "transition: all 0.4s ease-in-out;"}
       `
     });
